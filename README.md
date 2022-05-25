@@ -6,6 +6,8 @@ Table of Contents:
 
 ## Grid_Search
 *
+    ![grid_search](figures/grid_search_results_all.png)
+*
     ![grid_search](figures/grid_search_results.png)
 ## Best_Model
 * Grid of reconstructions of samples. First block of row is for originals, second for reconstructions:
