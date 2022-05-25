@@ -1,8 +1,8 @@
 # Disentangling Orthography using beta-VAE:
 
 Table of Contents:
-1. [Grid_Search](#Grid Search)
-2. [Best_Model](#Best model)
+1. [Grid_Search](#Grid_Search)
+2. [Best_Model](#Best_model)
 
 ## Grid_Search
 *
