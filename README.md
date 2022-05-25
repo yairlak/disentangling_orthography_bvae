@@ -1,3 +1,4 @@
+# Disentangling Orthography using beta-VAE:
 
 Table of Contents:
 1. [Grid Search](#Grid Search)
