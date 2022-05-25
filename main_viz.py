@@ -31,7 +31,7 @@ def parse_arguments(args_to_parse):
                         help="List of all plots to generate. `generate-samples`: random decoded samples. `data-samples` samples from the dataset. `reconstruct` first rnows//2 will be the original and rest will be the corresponding reconstructions. `traversals` traverses the most important rnows dimensions with ncols different samples from the prior or posterior. `reconstruct-traverse` first row for original, second are reconstructions, rest are traversals. `gif-traversals` grid of gifs where rows are latent dimensions, columns are examples, each gif shows posterior traversals. `all` runs every plot.")
     parser.add_argument('-s', '--seed', type=int, default=None,
                         help='Random seed. Can be `None` for stochastic behavior.')
-    parser.add_argument('-r', '--n-rows', type=int, default=16,
+    parser.add_argument('-r', '--n-rows', type=int, default=6,
                         help='The number of rows to visualize (if applicable).')
     parser.add_argument('-c', '--n-cols', type=int, default=20,
                         help='The number of columns to visualize (if applicable).')
