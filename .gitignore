@@ -1,0 +1,41 @@
+# directories
+venv*/
+data/
+notebooks/
+old*
+trained_models/
+imgs/*
+.idea/
+experiments/
+.vscode/
+*backup*/
+archive*
+log*
+pretrained_models
+test/
+
+# Byte-compiled / optimized / DLL files
+*.egg-info
+*pyc
+__pycache__/
+*.py[cod]
+*.egg*
+.ipynb_checkpoints/
+.DS_Store
+
+# files
+
+# extensions
+*.pyc
+*.log
+*.sh
+*.tar
+*.zip
+*.tar
+*.sublime*
+*.swp
+*.out
+*.pt
+
+# placeholders to keep directories
+!.keep
