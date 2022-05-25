@@ -6,7 +6,7 @@ Table of Contents:
 
 ## Grid_Search
 *
-    ![grid_search](figures/grid_search_results_all.png)
+    ![grid_search](figures/grid_search_results_all_models.png)
 *
     ![grid_search](figures/grid_search_results.png)
 ## Best_Model
