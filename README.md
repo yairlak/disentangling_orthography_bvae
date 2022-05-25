@@ -4,6 +4,7 @@ Table of Contents:
 2. [Best Model](#Best model)
 
 ## Grid Search
+*
     ![grid_search](figures/grid_search_results.png)
 ## Best Model
 * Grid of gifs where rows are latent dimensions, columns are examples, each gif shows posterior traversals:
