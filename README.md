@@ -5,6 +5,11 @@ Table of Contents:
 2. [Best Model](#Best_model)
 
 ## Grid_Search
+Optimization of model hyperparameters and training setup for both the reconcostruction loss (recon_loss) and disentanglment of the latent units (quantified by the mututal-information gap MIG), where model and training hyperparameters are:
+b - beta size of the regularization in ELBO.
+ls - latent size of the latent layer.
+bs - batch size during training.
+lr - learning rate.
 *
     ![grid_search](figures/grid_search_results_scatter.png)
     The smaller learning-rate is better for both reconstruction loss and MIG. Higher beta value improves MIG as expected.
