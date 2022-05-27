@@ -1,4 +1,5 @@
 import os
+import glob
 import pickle
 import itertools
 import pandas as pd
@@ -6,22 +7,22 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# HYPERPARAMS
-BETAS='1 2'.split()
-BATCH_SIZES='64 128'.split()
-LATENT_SIZES='16 32'.split()
-LEARNING_RATES='0.001 0.01'.split()
+# PLOT RESULTS FOR ALL MODELS STARTING WITH THE FOLLOWING NAME
+model_and_data_type = 'betaB_dletters'
 
 # PATHS
 path2logs = os.path.join('..', 'results')
 path2output = os.path.join('..', 'results')
 path2figures = os.path.join('..', 'figures')
 
+dirnames = glob.glob(os.path.join(path2logs, model_and_data_type + '*/'))
+
 df = pd.DataFrame()
-for beta, batch_size, latent_size, learning_rate in \
-        list(itertools.product(BETAS, BATCH_SIZES,
-                               LATENT_SIZES, LEARNING_RATES)):
-    model_name = f'betaB_dletters_beta_{beta}_latent_size_{latent_size}_batch_size_{batch_size}_learning_rate_{learning_rate}'
+for dirname in dirnames:
+    model_name = os.path.basename(os.path.normpath(dirname))
+    s = model_name[len(model_and_data_type)+1:]
+    print(s.split('_'))
+    _, beta, _, _, latent_size, _, _, batch_size, _, _, learning_rate = s.split('_')
     fn_log = 'eval.pkl'
     fn_log = os.path.join(path2logs, model_name, fn_log)
     print(f'Loading {fn_log}')
