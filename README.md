@@ -26,6 +26,6 @@ Latent-layer analysis of one of the models from the Pareto front (b_2_ls_32_bs_6
 * Posterior traversals - grid of gifs where rows are latent dimensions, columns are examples, each gif shows posterior traversals:
 
     ![grid_posteriors](results/betaB_dletters_beta_2_latent_size_32_batch_size_64_learning_rate_0.001/posterior_traversals.gif)
-* Prior traversals - grid of gifs where rows are latent dimensions:
+* Prior traversals - rows are latent dimensions:
 
     ![grid_priors](results/betaB_dletters_beta_2_latent_size_32_batch_size_64_learning_rate_0.001/prior_traversals.png)
