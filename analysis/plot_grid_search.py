@@ -16,6 +16,7 @@ path2output = os.path.join('..', 'results')
 path2figures = os.path.join('..', 'figures')
 
 dirnames = glob.glob(os.path.join(path2logs, model_and_data_type + '*/'))
+print(f'found {len(dirnames)} models')
 
 df = pd.DataFrame()
 for dirname in dirnames:
@@ -28,6 +29,7 @@ for dirname in dirnames:
     print(f'Loading {fn_log}')
     if os.path.exists(fn_log):
         metrics, losses = pickle.load(open(fn_log, 'rb'))
+        print(dirname)
     else:
         print(f'WARNING: log not found - {fn_log}')
     df = df.append({'beta':beta,
@@ -54,10 +56,10 @@ print(f'Best model with minimal train loss is: \n {df.iloc[IX_min]}')
 
 # PLOT
 fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-sns.barplot(data=df, x='beta', y='recon_loss', hue='latent_size', ax=axs[0, 0])
-sns.barplot(data=df, x='beta', y='log_MIG', hue='latent_size', ax=axs[0, 1])
-sns.barplot(data=df, x='learning_rate', y='recon_loss', hue='batch_size', ax=axs[1, 0])
-sns.barplot(data=df, x='learning_rate', y='log_MIG', hue='batch_size', ax=axs[1, 1])
+sns.barplot(data=df, x='beta', y='recon_loss', hue='latent_size', ax=axs[0, 0], order=df['beta'])
+sns.barplot(data=df, x='beta', y='log_MIG', hue='latent_size', ax=axs[0, 1], order=df['beta'])
+sns.barplot(data=df, x='learning_rate', y='recon_loss', hue='batch_size', ax=axs[1, 0], order=df['learning_rate'])
+sns.barplot(data=df, x='learning_rate', y='log_MIG', hue='batch_size', ax=axs[1, 1], order=df['learning_rate'])
 for ax in axs.flatten():
     ax.xaxis.label.set_size(30)
     ax.yaxis.label.set_size(30)
