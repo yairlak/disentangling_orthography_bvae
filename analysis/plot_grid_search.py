@@ -56,10 +56,10 @@ print(f'Best model with minimal train loss is: \n {df.iloc[IX_min]}')
 
 # PLOT
 fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-sns.barplot(data=df, x='beta', y='recon_loss', hue='latent_size', ax=axs[0, 0], order=df['beta'])
-sns.barplot(data=df, x='beta', y='log_MIG', hue='latent_size', ax=axs[0, 1], order=df['beta'])
-sns.barplot(data=df, x='learning_rate', y='recon_loss', hue='batch_size', ax=axs[1, 0], order=df['learning_rate'])
-sns.barplot(data=df, x='learning_rate', y='log_MIG', hue='batch_size', ax=axs[1, 1], order=df['learning_rate'])
+sns.barplot(data=df, x='beta', y='recon_loss', hue='latent_size', ax=axs[0, 0])#, order=df['beta'])
+sns.barplot(data=df, x='beta', y='log_MIG', hue='latent_size', ax=axs[0, 1])#, order=df['beta'])
+sns.barplot(data=df, x='learning_rate', y='recon_loss', hue='batch_size', ax=axs[1, 0])#, order=df['learning_rate'])
+sns.barplot(data=df, x='learning_rate', y='log_MIG', hue='batch_size', ax=axs[1, 1])#, order=df['learning_rate'])
 for ax in axs.flatten():
     ax.xaxis.label.set_size(30)
     ax.yaxis.label.set_size(30)
