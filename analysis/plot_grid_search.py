@@ -24,20 +24,27 @@ for dirname in dirnames:
     s = model_name[len(model_and_data_type)+1:]
     print(s.split('_'))
     _, beta, _, _, latent_size, _, _, batch_size, _, _, learning_rate = s.split('_')
-    fn_log = 'eval.pkl'
+    fn_eval = 'eval.pkl'
+    fn_log = 'train_losses.log'
+    fn_eval = os.path.join(path2logs, model_name, fn_eval)
     fn_log = os.path.join(path2logs, model_name, fn_log)
-    print(f'Loading {fn_log}')
-    if os.path.exists(fn_log):
-        metrics, losses = pickle.load(open(fn_log, 'rb'))
+    print(f'Loading {fn_eval}')
+    
+    if os.path.exists(fn_log) and os.path.exists(fn_eval):
+        metrics, losses = pickle.load(open(fn_eval, 'rb'))
+        df_log = pd.read_csv(fn_log)
         print(dirname)
     else:
         print(f'WARNING: log not found - {fn_log}')
+    
+    recon_loss = float(df_log[df_log['Loss']=='recon_loss'].tail(1)['Value']) # take last value
+
     df = df.append({'beta':beta,
                    'latent_size':latent_size,
                    'batch_size':batch_size,
                    'learning_rate':learning_rate,
-                   'recon_loss':losses['recon_loss'],
-                   'neg_recon_loss':-losses['recon_loss'],
+                   'recon_loss':recon_loss,
+                   'neg_recon_loss':-recon_loss, #-losses['recon_loss'],
                    'MIG':metrics['MIG'],
                    'log_MIG':np.log10(metrics['MIG']),
                    'model_name':model_name,
@@ -51,8 +58,11 @@ fn_df = os.path.join(path2output, f'grid_search_results.json')
 df.to_json(fn_df)
 print(f'Results saved to: {fn_df}')
 
-IX_min = df['recon_loss'].idxmin(axis=0)
-print(f'Best model with minimal train loss is: \n {df.iloc[IX_min]}')
+print(f'Best model(s) in term of train reconstruction loss:')
+min_value = np.min(df['recon_loss'])
+print(df[df['recon_loss']==min_value])
+
+
 
 # PLOT
 fig, axs = plt.subplots(2, 2, figsize=(20, 20))
