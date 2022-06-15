@@ -15,7 +15,6 @@ from utils.helpers import (create_safe_directory, get_device, set_seed, get_n_pa
                            get_config_section, update_namespace_, FormatterNoDuplicate)
 from utils.visualize import GifTraversalsTraining
 
-
 CONFIG_FILE = "hyperparam.ini"
 RES_DIR = "results"
 LOG_LEVELS = list(logging._levelToName.values())
@@ -23,7 +22,6 @@ ADDITIONAL_EXP = ['custom', "debug", "best_celeba", "best_dsprites"]
 EXPERIMENTS = ADDITIONAL_EXP + ["{}_{}".format(loss, data)
                                 for loss in LOSSES
                                 for data in DATASETS]
-
 
 def parse_arguments(args_to_parse):
     """Parse the command line arguments.
@@ -183,7 +181,7 @@ def main(args):
     device = get_device(is_gpu=not args.no_cuda)
     exp_dir = os.path.join(RES_DIR, args.name)
     logger.info("Root directory for saving and loading experiments: {}".format(exp_dir))
-
+    
     if not args.is_eval_only:
 
         create_safe_directory(exp_dir, logger=logger)

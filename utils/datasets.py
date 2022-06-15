@@ -24,7 +24,8 @@ DATASETS_DICT = {"mnist": "MNIST",
                  "celeba": "CelebA",
                  "chairs": "Chairs",
                  "letters": "Letters",
-                 "dletters": "Dletters"
+                 "dletters": "Dletters",
+                 "dwords": "Dwords"
                  }
 DATASETS = list(DATASETS_DICT.keys())
 
@@ -421,9 +422,66 @@ class Dletters(DisentangledDataset):
                           lat_values['posY'].size,
                           lat_values['font'].size,
                           lat_values['upper'].size])
+    print('lat_sizes dLetters', lat_sizes)                 
+
+    def __init__(self, root=os.path.join(DIR, '../data/dwords/'), **kwargs):
+        super().__init__(root, [transforms.ToTensor()], **kwargs)
+
+        dataset_zip = np.load(self.train_data)
+        self.imgs = dataset_zip['imgs']
+        self.lat_values = dataset_zip['latents_values']
+        
+    def download(self):
+        """Download the dataset."""
+        os.makedirs(self.root)
+        # subprocess.check_call([/"curl", "-L", type(self).urls["train"],
+        #                        "--output", self.train_data])
+
+    def __getitem__(self, idx):
+        """Get the image of `idx`
+        Return
+        ------
+        sample : torch.Tensor
+            Tensor in [0.,1.] of shape `img_size`.
+
+        lat_value : np.array
+            Array of length 6, that gives the value of each factor of variation.
+        """
+        # stored image have binary and shape (H x W) so multiply by 255 (removed by AA) to get pixel
+        # values + add dimension
+        sample = np.expand_dims(self.imgs[idx], axis=-1)
+
+        # ToTensor transforms numpy.ndarray (H x W x C) in the range
+        # [0, 255] to a torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0]
+        sample = self.transforms(sample)
+
+        lat_value = self.lat_values[idx]
+        return sample, lat_value
+
+################################ NEW DATASET ADDED ###################
+class Dwords(DisentangledDataset):
+
+    files = {"train": "dwords.npz"}
+    #lat_names = ('shape', 'scale', 'posX', 'posY','font','upper')
+    lat_names = ('shape', 'scale', 'posX', 'posY','font','upper')
+    img_size = (1, 64, 64)
+    background_color = COLOUR_BLACK
+    lat_values = {'shape': np.array(np.arange(100)),
+                  'scale': np.array([15]),
+                  'posX': np.arange(-1, 2, 1),
+                  'posY': np.arange(-1, 2, 1),
+                  'font': np.array([0]),
+                  'upper': np.array([0,1]),
+                  'color': np.array([1.])}
+    lat_sizes = np.array([lat_values['shape'].size,
+                          lat_values['scale'].size,
+                          lat_values['posX'].size,
+                          lat_values['posY'].size,
+                          lat_values['font'].size,
+                          lat_values['upper'].size])
     print('lat_sizes', lat_sizes)                 
 
-    def __init__(self, root=os.path.join(DIR, '../data/dletters/'), **kwargs):
+    def __init__(self, root=os.path.join(DIR, '../data/dwords/'), **kwargs):
         super().__init__(root, [transforms.ToTensor()], **kwargs)
 
         dataset_zip = np.load(self.train_data)
