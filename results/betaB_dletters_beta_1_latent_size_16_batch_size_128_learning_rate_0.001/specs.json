@@ -19,7 +19,7 @@
         64
     ],
     "is_eval_only": false,
-    "is_metrics": false,
+    "is_metrics": true,
     "latent_dim": 16,
     "log_level": "info",
     "loss": "betaB",
