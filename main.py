@@ -12,7 +12,7 @@ from disvae.models.losses import LOSSES, RECON_DIST, get_loss_f
 from disvae.models.vae import MODELS
 from utils.datasets import get_dataloaders, get_img_size, DATASETS
 from utils.helpers import (create_safe_directory, get_device, set_seed, get_n_param,
-                           get_config_section, update_namespace_, FormatterNoDuplicate)
+                            get_config_section, update_namespace_, FormatterNoDuplicate)
 from utils.visualize import GifTraversalsTraining
 
 CONFIG_FILE = "hyperparam.ini"
@@ -39,7 +39,7 @@ def parse_arguments(args_to_parse):
 
     # General options
     general = parser.add_argument_group('General options')
-    general.add_argument('name', type=str,
+    general.add_argument('name', type=str, default='betaB_dwords',
                          help="Name of the model for storing and loading purposes.")
     general.add_argument('-L', '--log-level', help="Logging levels.",
                          default=default_config['log_level'], choices=LOG_LEVELS)

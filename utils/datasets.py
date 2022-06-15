@@ -422,7 +422,7 @@ class Dletters(DisentangledDataset):
                           lat_values['posY'].size,
                           lat_values['font'].size,
                           lat_values['upper'].size])
-    print('lat_sizes dLetters', lat_sizes)                 
+    #print('lat_sizes dLetters', lat_sizes)                 
 
     def __init__(self, root=os.path.join(DIR, '../data/dwords/'), **kwargs):
         super().__init__(root, [transforms.ToTensor()], **kwargs)
