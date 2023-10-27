@@ -13,7 +13,7 @@ archive*
 log*
 pretrained_models
 test/
-
+extra/
 # Byte-compiled / optimized / DLL files
 *.egg-info
 *pyc
@@ -26,6 +26,7 @@ __pycache__/
 # files
 
 # extensions
+*.npy
 *.pyc
 *.log
 #*.sh

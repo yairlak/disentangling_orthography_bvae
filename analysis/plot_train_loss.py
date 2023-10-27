@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 model_and_data_type = 'betaB_dletters'
 
 # PATHS
-path2logs = os.path.join('..', 'results')
-path2output = os.path.join('..', 'results')
-path2figures = os.path.join('..', 'figures')
+path2logs = os.path.join('.', 'results')
+path2output = os.path.join('.', 'results')
+path2figures = os.path.join('.', 'figures')
 
 dirnames = glob.glob(os.path.join(path2logs, model_and_data_type + '*/'))
 print(f'found {len(dirnames)} models')

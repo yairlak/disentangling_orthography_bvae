@@ -430,6 +430,10 @@ class Dletters(DisentangledDataset):
         dataset_zip = np.load(self.train_data)
         self.imgs = dataset_zip['imgs']
         self.lat_values = dataset_zip['latents_values']
+        self.lat_values_str = dataset_zip['latents_values_str']
+        self.lat_classes = dataset_zip['latents_classes']
+        self.lat_names = dataset_zip['latents_names']
+        self.lat_sizes = dataset_zip['latents_size']
         
     def download(self):
         """Download the dataset."""

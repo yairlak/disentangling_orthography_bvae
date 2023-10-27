@@ -11,9 +11,9 @@ import matplotlib.pyplot as plt
 model_and_data_type = 'betaB_dletters'
 
 # PATHS
-path2logs = os.path.join('..', 'results')
-path2output = os.path.join('..', 'results')
-path2figures = os.path.join('..', 'figures')
+path2logs = os.path.join('.', 'results')
+path2output = os.path.join('.', 'results')
+path2figures = os.path.join('.', 'figures')
 
 dirnames = glob.glob(os.path.join(path2logs, model_and_data_type + '*/'))
 print(f'found {len(dirnames)} models')
@@ -34,8 +34,10 @@ for dirname in dirnames:
         metrics, losses = pickle.load(open(fn_eval, 'rb'))
         df_log = pd.read_csv(fn_log)
         print(dirname)
-    else:
-        print(f'WARNING: log not found - {fn_log}')
+    elif not os.path.exists(fn_log):
+        print(f'WARNING: log file not found - {fn_log}')
+    elif not os.path.exists(fn_eval):
+        print(f'WARNING: eval file not found - {fn_eval}')
     
     recon_loss = float(df_log[df_log['Loss']=='recon_loss'].tail(1)['Value']) # take last value
 
@@ -58,9 +60,13 @@ fn_df = os.path.join(path2output, f'grid_search_results.json')
 df.to_json(fn_df)
 print(f'Results saved to: {fn_df}')
 
-print(f'Best model(s) in term of train reconstruction loss:')
-min_value = np.min(df['recon_loss'])
-print(df[df['recon_loss']==min_value])
+df_by_loss = df.sort_values('recon_loss').head(10)
+
+best_loss_models_names = df_by_loss["model_name"].values[:10]
+print(f'Best models in term of train reconstruction loss: ', *best_loss_models_names, sep='\n- ')
+
+best_MIG_models_names = df_by_loss.sort_values('log_MIG',ascending=False)["model_name"].values[:5]
+print(f'Best 5 models by MEG, from the 10 best loss models: ', *best_MIG_models_names, sep='\n- ')
 
 
 

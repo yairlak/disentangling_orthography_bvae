@@ -9,7 +9,7 @@
     "btcvae_G": 1,
     "checkpoint_every": 30,
     "dataset": "dletters",
-    "epochs": 100,
+    "epochs": 30,
     "eval_batchsize": 64,
     "experiment": "custom",
     "factor_G": 6,
@@ -19,7 +19,7 @@
         64
     ],
     "is_eval_only": false,
-    "is_metrics": false,
+    "is_metrics": true,
     "latent_dim": 16,
     "log_level": "info",
     "loss": "betaB",
@@ -32,5 +32,6 @@
     "no_test": false,
     "rec_dist": "bernoulli",
     "reg_anneal": 10000,
+    "rewrite": 0,
     "seed": 1234
 }

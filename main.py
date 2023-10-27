@@ -51,6 +51,8 @@ def parse_arguments(args_to_parse):
                          help='Disables CUDA training, even when have one.')
     general.add_argument('-s', '--seed', type=int, default=default_config['seed'],
                          help='Random seed. Can be `None` for stochastic behavior.')
+    general.add_argument('--rewrite', type=int, default=1,
+                         help='Set to rewrite model if the model exists. Is True and the model exists, the previous one is archived in a .zip file.')
 
     # Learning options
     training = parser.add_argument_group('Training specific options')
@@ -181,7 +183,11 @@ def main(args):
     device = get_device(is_gpu=not args.no_cuda)
     exp_dir = os.path.join(RES_DIR, args.name)
     logger.info("Root directory for saving and loading experiments: {}".format(exp_dir))
-    
+
+    if os.path.exists(exp_dir) and (not args.rewrite):
+        print("Rewrite is set to False and folder already exists. Returning.")
+        return
+
     if not args.is_eval_only:
 
         create_safe_directory(exp_dir, logger=logger)

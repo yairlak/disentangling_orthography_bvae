@@ -38,7 +38,6 @@ def gen2(savepath=None, text = 'text', index=1, mirror=False,
     return img
 
 
-
 path_out='../data/words/',
 
 #define words, sizes, fonts
@@ -49,11 +48,12 @@ path_out='../data/words/',
 # yshifts = range(-8, 8,2)
 
 wordlist = words
-sizes = np.arange(15,16,1)
-fonts = ['arial'] #, 'times', 'comic']
-xshifts = np.arange(-1, 2,1)
-yshifts = np.arange(-1, 2,1)
+sizes = np.arange(15, 16, 1)
+fonts = ['arial', 'times', 'comic']
+xshifts = np.arange(-1, 2, 1)
+yshifts = np.arange(-1, 2, 1)
 colours = [0]
+uppers = [0, 1]
 
 #for each word, create num_train + num_val exemplars, then split randomly into train and val.
 gc.collect()

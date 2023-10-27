@@ -172,7 +172,7 @@ class Evaluator:
         delta_mut_info = sorted_mut_info[:, 0] - sorted_mut_info[:, 1]
         # NOTE: currently only works if balanced dataset for every factor of variation
         # then H(v_k) = - |V_k|/|V_k| log(1/|V_k|) = log(|V_k|)
-        H_v = torch.from_numpy(lat_sizes).float().log()
+        H_v = torch.from_numpy(lat_sizes).float().log() + 0.001 # smoothing
         mig_k = delta_mut_info / H_v
         mig = mig_k.mean()  # mean over factor of variations
 
