@@ -361,10 +361,18 @@ class Visualizer():
                 all_cols[j].append(grid[:, [(j + 1) * padding_width + j * width_col + i
                                             for i in range(width_col)], :])
 
+
         pad_values = (1 - get_background(self.dataset)) * 255
+
+        # Plot 1 column of the gif in a figure where each column is a frame of the gif
+        img_one_sample = [[x[12] for x in all_cols]]*len(all_cols)
+        img_one_sample = [concatenate_pad(cols, pad_size=2, pad_values=pad_values, axis=1)
+                          for cols in img_one_sample]
+        filename = os.path.join(self.model_dir, "img_traversals.gif")
+        imageio.mimsave(filename, img_one_sample, fps=FPS_GIF)
+
         all_cols = [concatenate_pad(cols, pad_size=2, pad_values=pad_values, axis=1)
                     for cols in all_cols]
-
         filename = os.path.join(self.model_dir, PLOT_NAMES["gif_traversals"])
         imageio.mimsave(filename, all_cols, fps=FPS_GIF)
 

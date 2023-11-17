@@ -19,7 +19,8 @@ def parse_arguments(args_to_parse):
     Parameters
     ----------
     args_to_parse: list of str
-        Arguments to parse (splitted on whitespaces).
+        Arguments to parse (splitte
+        d on whitespaces).
     """
     description = "CLI for plotting using pretrained models of `disvae`"
     parser = argparse.ArgumentParser(description=description,

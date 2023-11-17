@@ -58,7 +58,8 @@ def encode_letters_by_4_bytes(letters):
 
 
 def encode_4_bytes_dist(letters_bigram, letters_unigram, dist_unigrams ):
-
+    # make sure the distance is in the correct direction
+    # scale in the range 0-1 and flip it -> convert to simmilarity
     pairs = list(combinations(letters_bigram, 2))
     n_bytes = 4
     embs = []
@@ -70,10 +71,10 @@ def encode_4_bytes_dist(letters_bigram, letters_unigram, dist_unigrams ):
         index_C = letters_unigram.index(pair[1][0])
         index_D = letters_unigram.index(pair[1][1])
 
-        emb[0] = dist_unigrams[index_A][index_C]
-        emb[1] = dist_unigrams[index_A][index_D]
-        emb[2] = dist_unigrams[index_B][index_C]
-        emb[3] = dist_unigrams[index_B][index_D]
+        emb[0] = 1-dist_unigrams[index_A][index_C] # Convert distance to similarity
+        emb[1] = 1-dist_unigrams[index_A][index_D]
+        emb[2] = 1-dist_unigrams[index_B][index_C]
+        emb[3] = 1-dist_unigrams[index_B][index_D]
 
         embs.append(emb)
     return embs

@@ -52,6 +52,7 @@ def generate_ngrams(unigrams, n=1):
 
     if n == 2:
         unigrams = ["a", "k", "l", "m",  "v"]
+        # unigrams = ["a", "d", "h", "i", "m", "n", "t"] # awraval
 
     res = []
     if n >= 1:

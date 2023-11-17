@@ -10,12 +10,11 @@ dataset='dletters' # dletters/dwords
 # betaB_dletters_beta_4_latent_size_6_batch_size_64_learning_rate_0.0001
 
 # HYPERPARAMS
-EPOCHS='30'
-BETAS='1 2 4 8 16 32 64 128'
+EPOCHS='50'
+BETAS='1 2 4 8 16 32 64 128 256'
 BATCH_SIZES='64'
 LATENT_SIZES='8 16 32 64 128 256'
 LEARNING_RATES='0.001 0.0001'
-
 
 # NUMBER OF STIMULI
 for BETA in $BETAS; do
