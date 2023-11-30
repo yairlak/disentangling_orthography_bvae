@@ -1,0 +1,2 @@
+model_checkpoint_path: "subspaces_220000"
+all_model_checkpoint_paths: "subspaces_220000"

@@ -1,0 +1,783 @@
+2023-11-29 07:10:10,250: Epoch: 000
+2023-11-29 07:10:14,993: Step: 000000, Gradient Time: 3.5481, Summary Time: 0.5763, Step Time: 4.1448
+2023-11-29 07:10:14,994: Losses: rec=34.6597, ent=0.0530, nonneg=0.4381, weight=1285.9448, total=36.1650, 
+2023-11-29 07:10:14,994: Metrics: num used latents=10.000, discrete_mig=0.018, discrete_mil=0.371, discrete_mod=0.913, SAP_score=0.058, 
+2023-11-29 07:10:19,013: Step: 000000, save data time 4.02
+2023-11-29 07:10:24,347: Step: 001000, Gradient Time: 0.0037, Summary Time: 0.2562, Step Time: 0.0091
+2023-11-29 07:10:24,347: Losses: rec=30.6070, ent=5.9678, nonneg=0.0035, weight=569.8716, total=31.2084, 
+2023-11-29 07:10:24,347: Metrics: num used latents=10.000, discrete_mig=0.090, discrete_mil=0.382, discrete_mod=0.871, SAP_score=0.232, 
+2023-11-29 07:10:29,689: Step: 002000, Gradient Time: 0.0037, Summary Time: 0.2491, Step Time: 0.0051
+2023-11-29 07:10:29,689: Losses: rec=30.4234, ent=4.0268, nonneg=0.0014, weight=449.8075, total=30.8940, 
+2023-11-29 07:10:29,690: Metrics: num used latents=10.000, discrete_mig=0.106, discrete_mil=0.406, discrete_mod=0.879, SAP_score=0.240, 
+2023-11-29 07:10:35,167: Step: 003000, Gradient Time: 0.0037, Summary Time: 0.2629, Step Time: 0.0052
+2023-11-29 07:10:35,167: Losses: rec=30.4292, ent=3.4307, nonneg=0.0007, weight=370.2117, total=30.8169, 
+2023-11-29 07:10:35,167: Metrics: num used latents=10.000, discrete_mig=0.110, discrete_mil=0.417, discrete_mod=0.879, SAP_score=0.236, 
+2023-11-29 07:10:35,805: Epoch: 001
+2023-11-29 07:10:41,214: Step: 004000, Gradient Time: 0.0037, Summary Time: 0.2610, Step Time: 0.0058
+2023-11-29 07:10:41,215: Losses: rec=30.5252, ent=3.2694, nonneg=0.0012, weight=311.8146, total=30.8539, 
+2023-11-29 07:10:41,215: Metrics: num used latents=10.000, discrete_mig=0.117, discrete_mil=0.426, discrete_mod=0.876, SAP_score=0.240, 
+2023-11-29 07:10:46,629: Step: 005000, Gradient Time: 0.0037, Summary Time: 0.2560, Step Time: 0.0051
+2023-11-29 07:10:46,630: Losses: rec=30.3903, ent=2.9758, nonneg=0.0015, weight=268.8678, total=30.6748, 
+2023-11-29 07:10:46,630: Metrics: num used latents=10.000, discrete_mig=0.125, discrete_mil=0.434, discrete_mod=0.872, SAP_score=0.246, 
+2023-11-29 07:10:52,123: Step: 006000, Gradient Time: 0.0037, Summary Time: 0.2522, Step Time: 0.0052
+2023-11-29 07:10:52,123: Losses: rec=30.4417, ent=2.9605, nonneg=0.0009, weight=237.1434, total=30.6941, 
+2023-11-29 07:10:52,123: Metrics: num used latents=10.000, discrete_mig=0.133, discrete_mil=0.438, discrete_mod=0.868, SAP_score=0.253, 
+2023-11-29 07:10:53,421: Epoch: 002
+2023-11-29 07:10:58,206: Step: 007000, Gradient Time: 0.0037, Summary Time: 0.2616, Step Time: 0.0058
+2023-11-29 07:10:58,206: Losses: rec=30.5834, ent=2.9000, nonneg=0.0007, weight=212.6645, total=30.8110, 
+2023-11-29 07:10:58,206: Metrics: num used latents=10.000, discrete_mig=0.139, discrete_mil=0.444, discrete_mod=0.873, SAP_score=0.256, 
+2023-11-29 07:11:03,638: Step: 008000, Gradient Time: 0.0037, Summary Time: 0.2527, Step Time: 0.0052
+2023-11-29 07:11:03,639: Losses: rec=30.6509, ent=2.7137, nonneg=0.0047, weight=194.0149, total=30.8609, 
+2023-11-29 07:11:03,639: Metrics: num used latents=10.000, discrete_mig=0.145, discrete_mil=0.450, discrete_mod=0.874, SAP_score=0.260, 
+2023-11-29 07:11:09,125: Step: 009000, Gradient Time: 0.0037, Summary Time: 0.2541, Step Time: 0.0052
+2023-11-29 07:11:09,126: Losses: rec=30.7762, ent=2.7136, nonneg=0.0006, weight=179.9087, total=30.9700, 
+2023-11-29 07:11:09,126: Metrics: num used latents=10.000, discrete_mig=0.150, discrete_mil=0.455, discrete_mod=0.878, SAP_score=0.264, 
+2023-11-29 07:11:11,090: Epoch: 003
+2023-11-29 07:11:15,225: Step: 010000, Gradient Time: 0.0037, Summary Time: 0.2607, Step Time: 0.0058
+2023-11-29 07:11:15,225: Losses: rec=30.0401, ent=2.7906, nonneg=0.0054, weight=168.6123, total=30.2253, 
+2023-11-29 07:11:15,225: Metrics: num used latents=10.000, discrete_mig=0.155, discrete_mil=0.461, discrete_mod=0.880, SAP_score=0.269, 
+2023-11-29 07:11:20,624: Step: 011000, Gradient Time: 0.0037, Summary Time: 0.2530, Step Time: 0.0051
+2023-11-29 07:11:20,624: Losses: rec=30.5222, ent=2.6317, nonneg=0.0003, weight=159.4811, total=30.6950, 
+2023-11-29 07:11:20,624: Metrics: num used latents=10.000, discrete_mig=0.158, discrete_mil=0.467, discrete_mod=0.883, SAP_score=0.274, 
+2023-11-29 07:11:26,082: Step: 012000, Gradient Time: 0.0037, Summary Time: 0.2573, Step Time: 0.0052
+2023-11-29 07:11:26,082: Losses: rec=30.6840, ent=2.6503, nonneg=0.0000, weight=152.1919, total=30.8494, 
+2023-11-29 07:11:26,083: Metrics: num used latents=10.000, discrete_mig=0.163, discrete_mil=0.474, discrete_mod=0.888, SAP_score=0.282, 
+2023-11-29 07:11:28,696: Epoch: 004
+2023-11-29 07:11:32,237: Step: 013000, Gradient Time: 0.0038, Summary Time: 0.2646, Step Time: 0.0059
+2023-11-29 07:11:32,237: Losses: rec=30.4639, ent=2.6609, nonneg=0.0001, weight=146.1233, total=30.6234, 
+2023-11-29 07:11:32,237: Metrics: num used latents=10.000, discrete_mig=0.168, discrete_mil=0.477, discrete_mod=0.888, SAP_score=0.295, 
+2023-11-29 07:11:37,617: Step: 014000, Gradient Time: 0.0037, Summary Time: 0.2597, Step Time: 0.0051
+2023-11-29 07:11:37,617: Losses: rec=30.5173, ent=2.5644, nonneg=0.0010, weight=141.0920, total=30.6717, 
+2023-11-29 07:11:37,617: Metrics: num used latents=10.000, discrete_mig=0.176, discrete_mil=0.486, discrete_mod=0.894, SAP_score=0.306, 
+2023-11-29 07:11:43,116: Step: 015000, Gradient Time: 0.0037, Summary Time: 0.2523, Step Time: 0.0052
+2023-11-29 07:11:43,116: Losses: rec=30.6156, ent=2.5329, nonneg=0.0012, weight=137.0185, total=30.7659, 
+2023-11-29 07:11:43,116: Metrics: num used latents=10.000, discrete_mig=0.184, discrete_mil=0.495, discrete_mod=0.901, SAP_score=0.320, 
+2023-11-29 07:11:46,401: Epoch: 005
+2023-11-29 07:11:49,266: Step: 016000, Gradient Time: 0.0037, Summary Time: 0.2654, Step Time: 0.0059
+2023-11-29 07:11:49,266: Losses: rec=30.5255, ent=2.5591, nonneg=0.0004, weight=133.5532, total=30.6721, 
+2023-11-29 07:11:49,267: Metrics: num used latents=10.000, discrete_mig=0.194, discrete_mil=0.506, discrete_mod=0.908, SAP_score=0.339, 
+2023-11-29 07:11:54,666: Step: 017000, Gradient Time: 0.0037, Summary Time: 0.2601, Step Time: 0.0051
+2023-11-29 07:11:54,666: Losses: rec=30.6418, ent=2.5296, nonneg=0.0021, weight=130.8761, total=30.7864, 
+2023-11-29 07:11:54,666: Metrics: num used latents=10.000, discrete_mig=0.200, discrete_mil=0.515, discrete_mod=0.913, SAP_score=0.354, 
+2023-11-29 07:12:00,097: Step: 018000, Gradient Time: 0.0037, Summary Time: 0.2632, Step Time: 0.0051
+2023-11-29 07:12:00,097: Losses: rec=30.3703, ent=2.5303, nonneg=0.0021, weight=128.2820, total=30.5122, 
+2023-11-29 07:12:00,097: Metrics: num used latents=10.000, discrete_mig=0.210, discrete_mil=0.526, discrete_mod=0.918, SAP_score=0.364, 
+2023-11-29 07:12:04,030: Epoch: 006
+2023-11-29 07:12:06,231: Step: 019000, Gradient Time: 0.0037, Summary Time: 0.2499, Step Time: 0.0059
+2023-11-29 07:12:06,231: Losses: rec=30.5209, ent=2.4714, nonneg=0.0028, weight=126.3399, total=30.6609, 
+2023-11-29 07:12:06,232: Metrics: num used latents=10.000, discrete_mig=0.218, discrete_mil=0.535, discrete_mod=0.922, SAP_score=0.375, 
+2023-11-29 07:12:11,604: Step: 020000, Gradient Time: 0.0037, Summary Time: 0.2533, Step Time: 0.0051
+2023-11-29 07:12:11,604: Losses: rec=30.7238, ent=2.4530, nonneg=0.0047, weight=124.6779, total=30.8631, 
+2023-11-29 07:12:11,604: Metrics: num used latents=10.000, discrete_mig=0.224, discrete_mil=0.545, discrete_mod=0.925, SAP_score=0.381, 
+2023-11-29 07:12:15,393: Step: 020000, save data time 3.79
+2023-11-29 07:12:20,864: Step: 021000, Gradient Time: 0.0037, Summary Time: 0.2526, Step Time: 0.0090
+2023-11-29 07:12:20,864: Losses: rec=30.9072, ent=2.4261, nonneg=0.0022, weight=123.0321, total=31.0435, 
+2023-11-29 07:12:20,864: Metrics: num used latents=10.000, discrete_mig=0.235, discrete_mil=0.554, discrete_mod=0.928, SAP_score=0.392, 
+2023-11-29 07:12:25,464: Epoch: 007
+2023-11-29 07:12:27,064: Step: 022000, Gradient Time: 0.0037, Summary Time: 0.2505, Step Time: 0.0059
+2023-11-29 07:12:27,064: Losses: rec=30.5024, ent=2.4834, nonneg=0.0015, weight=121.8719, total=30.6375, 
+2023-11-29 07:12:27,064: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.563, discrete_mod=0.930, SAP_score=0.401, 
+2023-11-29 07:12:32,516: Step: 023000, Gradient Time: 0.0037, Summary Time: 0.2499, Step Time: 0.0052
+2023-11-29 07:12:32,516: Losses: rec=30.2883, ent=2.4584, nonneg=0.0014, weight=120.6078, total=30.4219, 
+2023-11-29 07:12:32,516: Metrics: num used latents=10.000, discrete_mig=0.249, discrete_mil=0.572, discrete_mod=0.932, SAP_score=0.410, 
+2023-11-29 07:12:37,957: Step: 024000, Gradient Time: 0.0037, Summary Time: 0.2525, Step Time: 0.0052
+2023-11-29 07:12:37,957: Losses: rec=30.4769, ent=2.4004, nonneg=0.0019, weight=119.6354, total=30.6095, 
+2023-11-29 07:12:37,958: Metrics: num used latents=10.000, discrete_mig=0.257, discrete_mil=0.580, discrete_mod=0.933, SAP_score=0.417, 
+2023-11-29 07:12:43,236: Epoch: 008
+2023-11-29 07:12:44,191: Step: 025000, Gradient Time: 0.0037, Summary Time: 0.3100, Step Time: 0.0059
+2023-11-29 07:12:44,191: Losses: rec=30.7607, ent=2.3982, nonneg=0.0014, weight=118.8685, total=30.8923, 
+2023-11-29 07:12:44,191: Metrics: num used latents=10.000, discrete_mig=0.264, discrete_mil=0.588, discrete_mod=0.934, SAP_score=0.424, 
+2023-11-29 07:12:49,647: Step: 026000, Gradient Time: 0.0037, Summary Time: 0.2616, Step Time: 0.0052
+2023-11-29 07:12:49,648: Losses: rec=30.7296, ent=2.3275, nonneg=0.0044, weight=117.9922, total=30.8614, 
+2023-11-29 07:12:49,648: Metrics: num used latents=10.000, discrete_mig=0.273, discrete_mil=0.599, discrete_mod=0.938, SAP_score=0.429, 
+2023-11-29 07:12:55,033: Step: 027000, Gradient Time: 0.0037, Summary Time: 0.2521, Step Time: 0.0051
+2023-11-29 07:12:55,033: Losses: rec=30.3989, ent=2.4289, nonneg=0.0021, weight=117.2911, total=30.5293, 
+2023-11-29 07:12:55,033: Metrics: num used latents=10.000, discrete_mig=0.280, discrete_mil=0.607, discrete_mod=0.941, SAP_score=0.435, 
+2023-11-29 07:13:00,576: Step: 028000, Gradient Time: 0.0037, Summary Time: 0.2558, Step Time: 0.0053
+2023-11-29 07:13:00,576: Losses: rec=30.8192, ent=2.3475, nonneg=0.0015, weight=116.7070, total=30.9484, 
+2023-11-29 07:13:00,576: Metrics: num used latents=10.000, discrete_mig=0.287, discrete_mil=0.617, discrete_mod=0.946, SAP_score=0.440, 
+2023-11-29 07:13:01,216: Epoch: 009
+2023-11-29 07:13:06,715: Step: 029000, Gradient Time: 0.0038, Summary Time: 0.2552, Step Time: 0.0059
+2023-11-29 07:13:06,715: Losses: rec=30.9485, ent=2.2818, nonneg=0.0009, weight=116.1286, total=31.0765, 
+2023-11-29 07:13:06,715: Metrics: num used latents=10.000, discrete_mig=0.295, discrete_mil=0.626, discrete_mod=0.949, SAP_score=0.446, 
+2023-11-29 07:13:12,142: Step: 030000, Gradient Time: 0.0037, Summary Time: 0.2618, Step Time: 0.0051
+2023-11-29 07:13:12,142: Losses: rec=30.4108, ent=2.3965, nonneg=0.0030, weight=115.6132, total=30.5399, 
+2023-11-29 07:13:12,142: Metrics: num used latents=10.000, discrete_mig=0.303, discrete_mil=0.633, discrete_mod=0.953, SAP_score=0.450, 
+2023-11-29 07:13:17,641: Step: 031000, Gradient Time: 0.0037, Summary Time: 0.2530, Step Time: 0.0052
+2023-11-29 07:13:17,641: Losses: rec=30.8797, ent=2.3228, nonneg=0.0014, weight=115.2187, total=31.0072, 
+2023-11-29 07:13:17,641: Metrics: num used latents=10.000, discrete_mig=0.311, discrete_mil=0.642, discrete_mod=0.956, SAP_score=0.454, 
+2023-11-29 07:13:18,964: Epoch: 010
+2023-11-29 07:13:23,750: Step: 032000, Gradient Time: 0.0037, Summary Time: 0.2501, Step Time: 0.0058
+2023-11-29 07:13:23,751: Losses: rec=30.9357, ent=2.3506, nonneg=0.0006, weight=114.7858, total=31.0625, 
+2023-11-29 07:13:23,751: Metrics: num used latents=10.000, discrete_mig=0.317, discrete_mil=0.650, discrete_mod=0.958, SAP_score=0.457, 
+2023-11-29 07:13:29,146: Step: 033000, Gradient Time: 0.0037, Summary Time: 0.2513, Step Time: 0.0051
+2023-11-29 07:13:29,146: Losses: rec=30.4615, ent=2.3333, nonneg=0.0005, weight=114.2491, total=30.5877, 
+2023-11-29 07:13:29,146: Metrics: num used latents=10.000, discrete_mig=0.325, discrete_mil=0.656, discrete_mod=0.960, SAP_score=0.459, 
+2023-11-29 07:13:34,686: Step: 034000, Gradient Time: 0.0037, Summary Time: 0.2616, Step Time: 0.0053
+2023-11-29 07:13:34,686: Losses: rec=30.6014, ent=2.3299, nonneg=0.0017, weight=113.9837, total=30.7279, 
+2023-11-29 07:13:34,686: Metrics: num used latents=10.000, discrete_mig=0.331, discrete_mil=0.663, discrete_mod=0.962, SAP_score=0.462, 
+2023-11-29 07:13:36,656: Epoch: 011
+2023-11-29 07:13:40,808: Step: 035000, Gradient Time: 0.0037, Summary Time: 0.2549, Step Time: 0.0058
+2023-11-29 07:13:40,808: Losses: rec=30.3018, ent=2.3573, nonneg=0.0016, weight=113.6558, total=30.4281, 
+2023-11-29 07:13:40,809: Metrics: num used latents=10.000, discrete_mig=0.338, discrete_mil=0.667, discrete_mod=0.963, SAP_score=0.466, 
+2023-11-29 07:13:46,238: Step: 036000, Gradient Time: 0.0037, Summary Time: 0.2591, Step Time: 0.0051
+2023-11-29 07:13:46,238: Losses: rec=30.3773, ent=2.3373, nonneg=0.0000, weight=113.2459, total=30.5022, 
+2023-11-29 07:13:46,238: Metrics: num used latents=10.000, discrete_mig=0.345, discrete_mil=0.673, discrete_mod=0.964, SAP_score=0.469, 
+2023-11-29 07:13:51,771: Step: 037000, Gradient Time: 0.0038, Summary Time: 0.2569, Step Time: 0.0053
+2023-11-29 07:13:51,772: Losses: rec=30.4275, ent=2.2890, nonneg=0.0015, weight=113.0062, total=30.5527, 
+2023-11-29 07:13:51,772: Metrics: num used latents=10.000, discrete_mig=0.349, discrete_mil=0.679, discrete_mod=0.966, SAP_score=0.470, 
+2023-11-29 07:13:54,396: Epoch: 012
+2023-11-29 07:13:57,910: Step: 038000, Gradient Time: 0.0037, Summary Time: 0.2649, Step Time: 0.0059
+2023-11-29 07:13:57,910: Losses: rec=30.7058, ent=2.2468, nonneg=0.0010, weight=112.7247, total=30.8303, 
+2023-11-29 07:13:57,910: Metrics: num used latents=10.000, discrete_mig=0.353, discrete_mil=0.685, discrete_mod=0.967, SAP_score=0.472, 
+2023-11-29 07:14:03,300: Step: 039000, Gradient Time: 0.0037, Summary Time: 0.2502, Step Time: 0.0051
+2023-11-29 07:14:03,300: Losses: rec=30.6170, ent=2.2832, nonneg=0.0018, weight=112.4716, total=30.7418, 
+2023-11-29 07:14:03,301: Metrics: num used latents=10.000, discrete_mig=0.355, discrete_mil=0.691, discrete_mod=0.969, SAP_score=0.474, 
+2023-11-29 07:14:08,727: Step: 040000, Gradient Time: 0.0037, Summary Time: 0.2521, Step Time: 0.0052
+2023-11-29 07:14:08,727: Losses: rec=30.4780, ent=2.3000, nonneg=0.0017, weight=112.3370, total=30.6027, 
+2023-11-29 07:14:08,727: Metrics: num used latents=10.000, discrete_mig=0.360, discrete_mil=0.695, discrete_mod=0.970, SAP_score=0.476, 
+2023-11-29 07:14:12,364: Step: 040000, save data time 3.64
+2023-11-29 07:14:15,621: Epoch: 013
+2023-11-29 07:14:18,488: Step: 041000, Gradient Time: 0.0037, Summary Time: 0.2546, Step Time: 0.0095
+2023-11-29 07:14:18,488: Losses: rec=30.6029, ent=2.2951, nonneg=0.0002, weight=112.0930, total=30.7266, 
+2023-11-29 07:14:18,488: Metrics: num used latents=10.000, discrete_mig=0.362, discrete_mil=0.700, discrete_mod=0.970, SAP_score=0.475, 
+2023-11-29 07:14:23,868: Step: 042000, Gradient Time: 0.0037, Summary Time: 0.2545, Step Time: 0.0051
+2023-11-29 07:14:23,868: Losses: rec=30.4000, ent=2.2828, nonneg=0.0000, weight=111.7076, total=30.5231, 
+2023-11-29 07:14:23,868: Metrics: num used latents=10.000, discrete_mig=0.365, discrete_mil=0.703, discrete_mod=0.971, SAP_score=0.476, 
+2023-11-29 07:14:29,310: Step: 043000, Gradient Time: 0.0037, Summary Time: 0.2565, Step Time: 0.0052
+2023-11-29 07:14:29,310: Losses: rec=30.8456, ent=2.2472, nonneg=0.0000, weight=111.7198, total=30.9686, 
+2023-11-29 07:14:29,310: Metrics: num used latents=10.000, discrete_mig=0.369, discrete_mil=0.708, discrete_mod=0.972, SAP_score=0.476, 
+2023-11-29 07:14:33,262: Epoch: 014
+2023-11-29 07:14:35,505: Step: 044000, Gradient Time: 0.0037, Summary Time: 0.2518, Step Time: 0.0059
+2023-11-29 07:14:35,505: Losses: rec=30.7199, ent=2.2669, nonneg=0.0000, weight=111.4437, total=30.8427, 
+2023-11-29 07:14:35,505: Metrics: num used latents=10.000, discrete_mig=0.367, discrete_mil=0.709, discrete_mod=0.971, SAP_score=0.475, 
+2023-11-29 07:14:40,891: Step: 045000, Gradient Time: 0.0037, Summary Time: 0.2476, Step Time: 0.0051
+2023-11-29 07:14:40,891: Losses: rec=30.8519, ent=2.2218, nonneg=0.0013, weight=111.2592, total=30.9749, 
+2023-11-29 07:14:40,891: Metrics: num used latents=10.000, discrete_mig=0.367, discrete_mil=0.714, discrete_mod=0.972, SAP_score=0.474, 
+2023-11-29 07:14:46,309: Step: 046000, Gradient Time: 0.0037, Summary Time: 0.2572, Step Time: 0.0051
+2023-11-29 07:14:46,309: Losses: rec=30.5955, ent=2.2040, nonneg=0.0015, weight=111.0857, total=30.7184, 
+2023-11-29 07:14:46,309: Metrics: num used latents=10.000, discrete_mig=0.370, discrete_mil=0.717, discrete_mod=0.972, SAP_score=0.477, 
+2023-11-29 07:14:50,872: Epoch: 015
+2023-11-29 07:14:52,466: Step: 047000, Gradient Time: 0.0037, Summary Time: 0.2479, Step Time: 0.0059
+2023-11-29 07:14:52,467: Losses: rec=30.5304, ent=2.2729, nonneg=0.0000, weight=110.8578, total=30.6527, 
+2023-11-29 07:14:52,467: Metrics: num used latents=10.000, discrete_mig=0.373, discrete_mil=0.720, discrete_mod=0.972, SAP_score=0.477, 
+2023-11-29 07:14:57,862: Step: 048000, Gradient Time: 0.0037, Summary Time: 0.2568, Step Time: 0.0051
+2023-11-29 07:14:57,862: Losses: rec=30.7461, ent=2.1833, nonneg=0.0010, weight=110.7902, total=30.8683, 
+2023-11-29 07:14:57,862: Metrics: num used latents=10.000, discrete_mig=0.373, discrete_mil=0.723, discrete_mod=0.972, SAP_score=0.477, 
+2023-11-29 07:15:03,359: Step: 049000, Gradient Time: 0.0037, Summary Time: 0.2602, Step Time: 0.0052
+2023-11-29 07:15:03,359: Losses: rec=30.4056, ent=2.2616, nonneg=0.0023, weight=110.5961, total=30.5286, 
+2023-11-29 07:15:03,359: Metrics: num used latents=10.000, discrete_mig=0.373, discrete_mil=0.726, discrete_mod=0.972, SAP_score=0.476, 
+2023-11-29 07:15:08,672: Epoch: 016
+2023-11-29 07:15:09,633: Step: 050000, Gradient Time: 0.0038, Summary Time: 0.3183, Step Time: 0.0059
+2023-11-29 07:15:09,633: Losses: rec=30.4675, ent=2.2474, nonneg=0.0009, weight=110.4996, total=30.5897, 
+2023-11-29 07:15:09,633: Metrics: num used latents=10.000, discrete_mig=0.376, discrete_mil=0.728, discrete_mod=0.971, SAP_score=0.478, 
+2023-11-29 07:15:15,088: Step: 051000, Gradient Time: 0.0038, Summary Time: 0.2494, Step Time: 0.0052
+2023-11-29 07:15:15,088: Losses: rec=30.5028, ent=2.1617, nonneg=0.0022, weight=110.3834, total=30.6251, 
+2023-11-29 07:15:15,088: Metrics: num used latents=10.000, discrete_mig=0.375, discrete_mil=0.734, discrete_mod=0.973, SAP_score=0.475, 
+2023-11-29 07:15:20,692: Step: 052000, Gradient Time: 0.0038, Summary Time: 0.2587, Step Time: 0.0053
+2023-11-29 07:15:20,692: Losses: rec=30.7874, ent=2.1748, nonneg=0.0001, weight=110.2047, total=30.9085, 
+2023-11-29 07:15:20,692: Metrics: num used latents=10.000, discrete_mig=0.377, discrete_mil=0.736, discrete_mod=0.973, SAP_score=0.477, 
+2023-11-29 07:15:26,246: Step: 053000, Gradient Time: 0.0037, Summary Time: 0.2634, Step Time: 0.0053
+2023-11-29 07:15:26,246: Losses: rec=30.4133, ent=2.2755, nonneg=0.0009, weight=110.1415, total=30.5353, 
+2023-11-29 07:15:26,247: Metrics: num used latents=10.000, discrete_mig=0.377, discrete_mil=0.741, discrete_mod=0.975, SAP_score=0.477, 
+2023-11-29 07:15:26,891: Epoch: 017
+2023-11-29 07:15:32,425: Step: 054000, Gradient Time: 0.0038, Summary Time: 0.2579, Step Time: 0.0059
+2023-11-29 07:15:32,426: Losses: rec=30.5183, ent=2.1744, nonneg=0.0002, weight=110.1037, total=30.6393, 
+2023-11-29 07:15:32,426: Metrics: num used latents=10.000, discrete_mig=0.376, discrete_mil=0.746, discrete_mod=0.977, SAP_score=0.473, 
+2023-11-29 07:15:37,961: Step: 055000, Gradient Time: 0.0038, Summary Time: 0.2518, Step Time: 0.0053
+2023-11-29 07:15:37,961: Losses: rec=30.5077, ent=2.2403, nonneg=0.0016, weight=109.8180, total=30.6296, 
+2023-11-29 07:15:37,961: Metrics: num used latents=10.000, discrete_mig=0.379, discrete_mil=0.750, discrete_mod=0.978, SAP_score=0.473, 
+2023-11-29 07:15:43,530: Step: 056000, Gradient Time: 0.0038, Summary Time: 0.2584, Step Time: 0.0053
+2023-11-29 07:15:43,530: Losses: rec=30.4451, ent=2.1825, nonneg=0.0022, weight=109.6796, total=30.5668, 
+2023-11-29 07:15:43,530: Metrics: num used latents=10.000, discrete_mig=0.379, discrete_mil=0.753, discrete_mod=0.979, SAP_score=0.471, 
+2023-11-29 07:15:44,840: Epoch: 018
+2023-11-29 07:15:49,692: Step: 057000, Gradient Time: 0.0037, Summary Time: 0.2573, Step Time: 0.0059
+2023-11-29 07:15:49,693: Losses: rec=30.5869, ent=2.1151, nonneg=0.0022, weight=109.6310, total=30.7082, 
+2023-11-29 07:15:49,693: Metrics: num used latents=10.000, discrete_mig=0.380, discrete_mil=0.757, discrete_mod=0.980, SAP_score=0.470, 
+2023-11-29 07:15:55,178: Step: 058000, Gradient Time: 0.0037, Summary Time: 0.2754, Step Time: 0.0052
+2023-11-29 07:15:55,178: Losses: rec=30.4565, ent=2.2380, nonneg=0.0009, weight=109.5084, total=30.5776, 
+2023-11-29 07:15:55,178: Metrics: num used latents=10.000, discrete_mig=0.381, discrete_mil=0.761, discrete_mod=0.981, SAP_score=0.468, 
+2023-11-29 07:16:00,691: Step: 059000, Gradient Time: 0.0037, Summary Time: 0.2784, Step Time: 0.0052
+2023-11-29 07:16:00,692: Losses: rec=30.7382, ent=2.1519, nonneg=0.0017, weight=109.3265, total=30.8591, 
+2023-11-29 07:16:00,692: Metrics: num used latents=10.000, discrete_mig=0.381, discrete_mil=0.764, discrete_mod=0.982, SAP_score=0.466, 
+2023-11-29 07:16:02,662: Epoch: 019
+2023-11-29 07:16:06,991: Step: 060000, Gradient Time: 0.0038, Summary Time: 0.2649, Step Time: 0.0060
+2023-11-29 07:16:06,991: Losses: rec=30.5427, ent=2.1698, nonneg=0.0017, weight=109.2373, total=30.6637, 
+2023-11-29 07:16:06,991: Metrics: num used latents=10.000, discrete_mig=0.381, discrete_mil=0.768, discrete_mod=0.983, SAP_score=0.464, 
+2023-11-29 07:16:10,702: Step: 060000, save data time 3.71
+2023-11-29 07:16:16,192: Step: 061000, Gradient Time: 0.0037, Summary Time: 0.2531, Step Time: 0.0089
+2023-11-29 07:16:16,192: Losses: rec=30.3157, ent=2.2461, nonneg=0.0007, weight=109.1703, total=30.4364, 
+2023-11-29 07:16:16,193: Metrics: num used latents=10.000, discrete_mig=0.381, discrete_mil=0.772, discrete_mod=0.984, SAP_score=0.463, 
+2023-11-29 07:16:21,613: Step: 062000, Gradient Time: 0.0037, Summary Time: 0.2462, Step Time: 0.0052
+2023-11-29 07:16:21,613: Losses: rec=30.6929, ent=2.1858, nonneg=0.0008, weight=109.0435, total=30.8132, 
+2023-11-29 07:16:21,613: Metrics: num used latents=10.000, discrete_mig=0.384, discrete_mil=0.775, discrete_mod=0.985, SAP_score=0.461, 
+2023-11-29 07:16:24,184: Epoch: 020
+2023-11-29 07:16:27,731: Step: 063000, Gradient Time: 0.0037, Summary Time: 0.2501, Step Time: 0.0058
+2023-11-29 07:16:27,731: Losses: rec=30.3795, ent=2.2110, nonneg=0.0003, weight=109.0539, total=30.4997, 
+2023-11-29 07:16:27,731: Metrics: num used latents=10.000, discrete_mig=0.380, discrete_mil=0.778, discrete_mod=0.986, SAP_score=0.458, 
+2023-11-29 07:16:33,197: Step: 064000, Gradient Time: 0.0037, Summary Time: 0.2544, Step Time: 0.0052
+2023-11-29 07:16:33,197: Losses: rec=30.4427, ent=2.1678, nonneg=0.0006, weight=108.8515, total=30.5626, 
+2023-11-29 07:16:33,197: Metrics: num used latents=10.000, discrete_mig=0.382, discrete_mil=0.782, discrete_mod=0.986, SAP_score=0.456, 
+2023-11-29 07:16:38,609: Step: 065000, Gradient Time: 0.0037, Summary Time: 0.2497, Step Time: 0.0051
+2023-11-29 07:16:38,610: Losses: rec=30.6214, ent=2.1662, nonneg=0.0005, weight=108.7757, total=30.7413, 
+2023-11-29 07:16:38,610: Metrics: num used latents=10.000, discrete_mig=0.383, discrete_mil=0.785, discrete_mod=0.987, SAP_score=0.454, 
+2023-11-29 07:16:41,833: Epoch: 021
+2023-11-29 07:16:44,740: Step: 066000, Gradient Time: 0.0037, Summary Time: 0.2527, Step Time: 0.0059
+2023-11-29 07:16:44,740: Losses: rec=30.5672, ent=2.1274, nonneg=0.0007, weight=108.6235, total=30.6868, 
+2023-11-29 07:16:44,740: Metrics: num used latents=10.000, discrete_mig=0.385, discrete_mil=0.789, discrete_mod=0.988, SAP_score=0.452, 
+2023-11-29 07:16:50,118: Step: 067000, Gradient Time: 0.0036, Summary Time: 0.2502, Step Time: 0.0051
+2023-11-29 07:16:50,118: Losses: rec=30.8088, ent=2.1537, nonneg=0.0009, weight=108.4891, total=30.9285, 
+2023-11-29 07:16:50,118: Metrics: num used latents=10.000, discrete_mig=0.382, discrete_mil=0.792, discrete_mod=0.989, SAP_score=0.449, 
+2023-11-29 07:16:55,605: Step: 068000, Gradient Time: 0.0037, Summary Time: 0.2500, Step Time: 0.0052
+2023-11-29 07:16:55,605: Losses: rec=30.6938, ent=2.1007, nonneg=0.0004, weight=108.4153, total=30.8129, 
+2023-11-29 07:16:55,605: Metrics: num used latents=10.000, discrete_mig=0.384, discrete_mil=0.796, discrete_mod=0.989, SAP_score=0.447, 
+2023-11-29 07:16:59,451: Epoch: 022
+2023-11-29 07:17:01,728: Step: 069000, Gradient Time: 0.0037, Summary Time: 0.2580, Step Time: 0.0058
+2023-11-29 07:17:01,728: Losses: rec=30.5104, ent=2.2403, nonneg=0.0012, weight=108.3248, total=30.6306, 
+2023-11-29 07:17:01,728: Metrics: num used latents=10.000, discrete_mig=0.382, discrete_mil=0.799, discrete_mod=0.990, SAP_score=0.444, 
+2023-11-29 07:17:07,129: Step: 070000, Gradient Time: 0.0037, Summary Time: 0.2527, Step Time: 0.0051
+2023-11-29 07:17:07,129: Losses: rec=30.0548, ent=2.2756, nonneg=0.0018, weight=108.2352, total=30.1753, 
+2023-11-29 07:17:07,129: Metrics: num used latents=10.000, discrete_mig=0.385, discrete_mil=0.803, discrete_mod=0.991, SAP_score=0.442, 
+2023-11-29 07:17:12,544: Step: 071000, Gradient Time: 0.0037, Summary Time: 0.2619, Step Time: 0.0051
+2023-11-29 07:17:12,544: Losses: rec=30.1898, ent=2.1839, nonneg=0.0030, weight=108.2960, total=30.3105, 
+2023-11-29 07:17:12,544: Metrics: num used latents=10.000, discrete_mig=0.386, discrete_mil=0.807, discrete_mod=0.992, SAP_score=0.438, 
+2023-11-29 07:17:17,066: Epoch: 023
+2023-11-29 07:17:18,697: Step: 072000, Gradient Time: 0.0037, Summary Time: 0.2506, Step Time: 0.0059
+2023-11-29 07:17:18,698: Losses: rec=30.8221, ent=2.0448, nonneg=0.0003, weight=108.0786, total=30.9406, 
+2023-11-29 07:17:18,698: Metrics: num used latents=10.000, discrete_mig=0.383, discrete_mil=0.810, discrete_mod=0.992, SAP_score=0.436, 
+2023-11-29 07:17:24,036: Step: 073000, Gradient Time: 0.0036, Summary Time: 0.2538, Step Time: 0.0051
+2023-11-29 07:17:24,036: Losses: rec=30.6042, ent=2.1142, nonneg=0.0005, weight=107.9342, total=30.7230, 
+2023-11-29 07:17:24,036: Metrics: num used latents=10.000, discrete_mig=0.386, discrete_mil=0.813, discrete_mod=0.993, SAP_score=0.435, 
+2023-11-29 07:17:29,406: Step: 074000, Gradient Time: 0.0036, Summary Time: 0.2650, Step Time: 0.0051
+2023-11-29 07:17:29,406: Losses: rec=30.5598, ent=2.1171, nonneg=0.0016, weight=107.9439, total=30.6791, 
+2023-11-29 07:17:29,406: Metrics: num used latents=10.000, discrete_mig=0.386, discrete_mil=0.816, discrete_mod=0.993, SAP_score=0.433, 
+2023-11-29 07:17:34,552: Epoch: 024
+2023-11-29 07:17:35,545: Step: 075000, Gradient Time: 0.0037, Summary Time: 0.3208, Step Time: 0.0058
+2023-11-29 07:17:35,545: Losses: rec=30.8255, ent=2.1566, nonneg=0.0008, weight=107.8552, total=30.9445, 
+2023-11-29 07:17:35,545: Metrics: num used latents=10.000, discrete_mig=0.385, discrete_mil=0.820, discrete_mod=0.994, SAP_score=0.429, 
+2023-11-29 07:17:40,908: Step: 076000, Gradient Time: 0.0036, Summary Time: 0.2465, Step Time: 0.0051
+2023-11-29 07:17:40,908: Losses: rec=30.4463, ent=2.1764, nonneg=0.0005, weight=107.7154, total=30.5651, 
+2023-11-29 07:17:40,908: Metrics: num used latents=10.000, discrete_mig=0.384, discrete_mil=0.824, discrete_mod=0.994, SAP_score=0.426, 
+2023-11-29 07:17:46,290: Step: 077000, Gradient Time: 0.0036, Summary Time: 0.2506, Step Time: 0.0051
+2023-11-29 07:17:46,290: Losses: rec=30.4814, ent=2.1021, nonneg=0.0004, weight=107.6163, total=30.5997, 
+2023-11-29 07:17:46,290: Metrics: num used latents=10.000, discrete_mig=0.384, discrete_mil=0.827, discrete_mod=0.995, SAP_score=0.423, 
+2023-11-29 07:17:51,673: Step: 078000, Gradient Time: 0.0036, Summary Time: 0.2588, Step Time: 0.0051
+2023-11-29 07:17:51,674: Losses: rec=30.3211, ent=2.1053, nonneg=0.0022, weight=107.6124, total=30.4403, 
+2023-11-29 07:17:51,674: Metrics: num used latents=10.000, discrete_mig=0.382, discrete_mil=0.829, discrete_mod=0.995, SAP_score=0.422, 
+2023-11-29 07:17:52,299: Epoch: 025
+2023-11-29 07:17:57,749: Step: 079000, Gradient Time: 0.0036, Summary Time: 0.2528, Step Time: 0.0058
+2023-11-29 07:17:57,749: Losses: rec=30.6765, ent=2.1906, nonneg=0.0020, weight=107.4709, total=30.7959, 
+2023-11-29 07:17:57,749: Metrics: num used latents=10.000, discrete_mig=0.380, discrete_mil=0.833, discrete_mod=0.995, SAP_score=0.418, 
+2023-11-29 07:18:03,113: Step: 080000, Gradient Time: 0.0036, Summary Time: 0.2478, Step Time: 0.0051
+2023-11-29 07:18:03,113: Losses: rec=30.5204, ent=2.2021, nonneg=0.0009, weight=107.3234, total=30.6392, 
+2023-11-29 07:18:03,113: Metrics: num used latents=10.000, discrete_mig=0.383, discrete_mil=0.836, discrete_mod=0.996, SAP_score=0.417, 
+2023-11-29 07:18:07,016: Step: 080000, save data time 3.90
+2023-11-29 07:18:12,566: Step: 081000, Gradient Time: 0.0037, Summary Time: 0.2596, Step Time: 0.0092
+2023-11-29 07:18:12,566: Losses: rec=30.3076, ent=2.2012, nonneg=0.0017, weight=107.2780, total=30.4268, 
+2023-11-29 07:18:12,566: Metrics: num used latents=10.000, discrete_mig=0.379, discrete_mil=0.839, discrete_mod=0.996, SAP_score=0.414, 
+2023-11-29 07:18:13,907: Epoch: 026
+2023-11-29 07:18:18,671: Step: 082000, Gradient Time: 0.0037, Summary Time: 0.2504, Step Time: 0.0058
+2023-11-29 07:18:18,671: Losses: rec=30.9263, ent=2.0211, nonneg=0.0006, weight=107.2077, total=31.0440, 
+2023-11-29 07:18:18,671: Metrics: num used latents=10.000, discrete_mig=0.378, discrete_mil=0.843, discrete_mod=0.996, SAP_score=0.410, 
+2023-11-29 07:18:24,077: Step: 083000, Gradient Time: 0.0036, Summary Time: 0.2549, Step Time: 0.0051
+2023-11-29 07:18:24,077: Losses: rec=30.2619, ent=2.0889, nonneg=0.0009, weight=107.0567, total=30.3799, 
+2023-11-29 07:18:24,077: Metrics: num used latents=10.000, discrete_mig=0.381, discrete_mil=0.845, discrete_mod=0.997, SAP_score=0.409, 
+2023-11-29 07:18:29,562: Step: 084000, Gradient Time: 0.0037, Summary Time: 0.2503, Step Time: 0.0052
+2023-11-29 07:18:29,562: Losses: rec=30.7671, ent=2.0207, nonneg=0.0004, weight=107.1098, total=30.8845, 
+2023-11-29 07:18:29,562: Metrics: num used latents=10.000, discrete_mig=0.380, discrete_mil=0.847, discrete_mod=0.997, SAP_score=0.406, 
+2023-11-29 07:18:31,588: Epoch: 027
+2023-11-29 07:18:35,704: Step: 085000, Gradient Time: 0.0037, Summary Time: 0.2543, Step Time: 0.0059
+2023-11-29 07:18:35,704: Losses: rec=30.2660, ent=2.2037, nonneg=0.0012, weight=106.9657, total=30.3845, 
+2023-11-29 07:18:35,704: Metrics: num used latents=10.000, discrete_mig=0.377, discrete_mil=0.850, discrete_mod=0.997, SAP_score=0.403, 
+2023-11-29 07:18:41,114: Step: 086000, Gradient Time: 0.0036, Summary Time: 0.2534, Step Time: 0.0051
+2023-11-29 07:18:41,114: Losses: rec=30.2345, ent=2.1657, nonneg=0.0008, weight=106.8738, total=30.3526, 
+2023-11-29 07:18:41,114: Metrics: num used latents=10.000, discrete_mig=0.376, discrete_mil=0.853, discrete_mod=0.997, SAP_score=0.401, 
+2023-11-29 07:18:46,571: Step: 087000, Gradient Time: 0.0036, Summary Time: 0.2517, Step Time: 0.0052
+2023-11-29 07:18:46,572: Losses: rec=30.4236, ent=2.0623, nonneg=0.0014, weight=106.8122, total=30.5414, 
+2023-11-29 07:18:46,572: Metrics: num used latents=10.000, discrete_mig=0.377, discrete_mil=0.856, discrete_mod=0.998, SAP_score=0.398, 
+2023-11-29 07:18:49,183: Epoch: 028
+2023-11-29 07:18:52,659: Step: 088000, Gradient Time: 0.0037, Summary Time: 0.2530, Step Time: 0.0058
+2023-11-29 07:18:52,659: Losses: rec=30.5312, ent=2.1517, nonneg=0.0014, weight=106.6646, total=30.6494, 
+2023-11-29 07:18:52,659: Metrics: num used latents=10.000, discrete_mig=0.375, discrete_mil=0.860, discrete_mod=0.998, SAP_score=0.395, 
+2023-11-29 07:18:58,098: Step: 089000, Gradient Time: 0.0037, Summary Time: 0.2543, Step Time: 0.0052
+2023-11-29 07:18:58,098: Losses: rec=30.5842, ent=2.0477, nonneg=0.0009, weight=106.5175, total=30.7014, 
+2023-11-29 07:18:58,098: Metrics: num used latents=10.000, discrete_mig=0.372, discrete_mil=0.863, discrete_mod=0.998, SAP_score=0.392, 
+2023-11-29 07:19:03,855: Step: 090000, Gradient Time: 0.0039, Summary Time: 0.3117, Step Time: 0.0054
+2023-11-29 07:19:03,855: Losses: rec=30.4456, ent=2.0431, nonneg=0.0024, weight=106.5937, total=30.5637, 
+2023-11-29 07:19:03,856: Metrics: num used latents=10.000, discrete_mig=0.372, discrete_mil=0.865, discrete_mod=0.998, SAP_score=0.390, 
+2023-11-29 07:19:07,296: Epoch: 029
+2023-11-29 07:19:10,226: Step: 091000, Gradient Time: 0.0039, Summary Time: 0.2546, Step Time: 0.0061
+2023-11-29 07:19:10,226: Losses: rec=30.3047, ent=2.1034, nonneg=0.0006, weight=106.3721, total=30.4219, 
+2023-11-29 07:19:10,226: Metrics: num used latents=10.000, discrete_mig=0.370, discrete_mil=0.868, discrete_mod=0.998, SAP_score=0.387, 
+2023-11-29 07:19:15,764: Step: 092000, Gradient Time: 0.0038, Summary Time: 0.2526, Step Time: 0.0053
+2023-11-29 07:19:15,764: Losses: rec=30.8338, ent=2.0005, nonneg=0.0000, weight=106.4644, total=30.9503, 
+2023-11-29 07:19:15,764: Metrics: num used latents=10.000, discrete_mig=0.367, discrete_mil=0.870, discrete_mod=0.998, SAP_score=0.385, 
+2023-11-29 07:19:21,344: Step: 093000, Gradient Time: 0.0038, Summary Time: 0.2676, Step Time: 0.0053
+2023-11-29 07:19:21,344: Losses: rec=31.0014, ent=2.1091, nonneg=0.0012, weight=106.3923, total=31.1189, 
+2023-11-29 07:19:21,345: Metrics: num used latents=10.000, discrete_mig=0.362, discrete_mil=0.873, discrete_mod=0.999, SAP_score=0.382, 
+2023-11-29 07:19:25,357: Epoch: 030
+2023-11-29 07:19:27,606: Step: 094000, Gradient Time: 0.0038, Summary Time: 0.2605, Step Time: 0.0060
+2023-11-29 07:19:27,606: Losses: rec=30.4407, ent=2.0628, nonneg=0.0006, weight=106.3309, total=30.5576, 
+2023-11-29 07:19:27,606: Metrics: num used latents=10.000, discrete_mig=0.366, discrete_mil=0.877, discrete_mod=0.999, SAP_score=0.379, 
+2023-11-29 07:19:33,101: Step: 095000, Gradient Time: 0.0037, Summary Time: 0.2656, Step Time: 0.0052
+2023-11-29 07:19:33,101: Losses: rec=30.5330, ent=2.0522, nonneg=0.0008, weight=106.1550, total=30.6498, 
+2023-11-29 07:19:33,101: Metrics: num used latents=10.000, discrete_mig=0.360, discrete_mil=0.880, discrete_mod=0.999, SAP_score=0.375, 
+2023-11-29 07:19:38,618: Step: 096000, Gradient Time: 0.0037, Summary Time: 0.2652, Step Time: 0.0052
+2023-11-29 07:19:38,618: Losses: rec=30.7683, ent=1.9996, nonneg=0.0005, weight=106.1604, total=30.8847, 
+2023-11-29 07:19:38,618: Metrics: num used latents=10.000, discrete_mig=0.359, discrete_mil=0.882, discrete_mod=0.999, SAP_score=0.374, 
+2023-11-29 07:19:43,271: Epoch: 031
+2023-11-29 07:19:44,888: Step: 097000, Gradient Time: 0.0037, Summary Time: 0.2681, Step Time: 0.0060
+2023-11-29 07:19:44,888: Losses: rec=30.8659, ent=1.9791, nonneg=0.0005, weight=106.0133, total=30.9821, 
+2023-11-29 07:19:44,888: Metrics: num used latents=10.000, discrete_mig=0.358, discrete_mil=0.884, discrete_mod=0.999, SAP_score=0.372, 
+2023-11-29 07:19:50,340: Step: 098000, Gradient Time: 0.0037, Summary Time: 0.2567, Step Time: 0.0052
+2023-11-29 07:19:50,341: Losses: rec=30.4463, ent=2.0415, nonneg=0.0008, weight=105.9760, total=30.5629, 
+2023-11-29 07:19:50,341: Metrics: num used latents=10.000, discrete_mig=0.354, discrete_mil=0.887, discrete_mod=0.999, SAP_score=0.369, 
+2023-11-29 07:19:55,864: Step: 099000, Gradient Time: 0.0037, Summary Time: 0.2529, Step Time: 0.0053
+2023-11-29 07:19:55,865: Losses: rec=30.6937, ent=2.0790, nonneg=0.0008, weight=105.8677, total=30.8104, 
+2023-11-29 07:19:55,865: Metrics: num used latents=10.000, discrete_mig=0.351, discrete_mil=0.889, discrete_mod=0.999, SAP_score=0.366, 
+2023-11-29 07:20:01,159: Epoch: 032
+2023-11-29 07:20:02,102: Step: 100000, Gradient Time: 0.0037, Summary Time: 0.3148, Step Time: 0.0059
+2023-11-29 07:20:02,102: Losses: rec=30.4329, ent=2.0518, nonneg=0.0021, weight=105.8364, total=30.5500, 
+2023-11-29 07:20:02,102: Metrics: num used latents=10.000, discrete_mig=0.347, discrete_mil=0.892, discrete_mod=0.999, SAP_score=0.364, 
+2023-11-29 07:20:05,732: Step: 100000, save data time 3.63
+2023-11-29 07:20:11,198: Step: 101000, Gradient Time: 0.0037, Summary Time: 0.2544, Step Time: 0.0088
+2023-11-29 07:20:11,198: Losses: rec=30.7108, ent=2.0908, nonneg=0.0007, weight=105.8464, total=30.8274, 
+2023-11-29 07:20:11,198: Metrics: num used latents=10.000, discrete_mig=0.344, discrete_mil=0.894, discrete_mod=0.999, SAP_score=0.362, 
+2023-11-29 07:20:16,646: Step: 102000, Gradient Time: 0.0037, Summary Time: 0.2571, Step Time: 0.0052
+2023-11-29 07:20:16,646: Losses: rec=30.3686, ent=2.0101, nonneg=0.0005, weight=105.6955, total=30.4845, 
+2023-11-29 07:20:16,646: Metrics: num used latents=10.000, discrete_mig=0.344, discrete_mil=0.897, discrete_mod=0.999, SAP_score=0.360, 
+2023-11-29 07:20:22,212: Step: 103000, Gradient Time: 0.0037, Summary Time: 0.2604, Step Time: 0.0053
+2023-11-29 07:20:22,213: Losses: rec=30.6386, ent=2.0785, nonneg=0.0000, weight=105.7223, total=30.7547, 
+2023-11-29 07:20:22,213: Metrics: num used latents=10.000, discrete_mig=0.337, discrete_mil=0.898, discrete_mod=0.999, SAP_score=0.357, 
+2023-11-29 07:20:22,850: Epoch: 033
+2023-11-29 07:20:28,337: Step: 104000, Gradient Time: 0.0037, Summary Time: 0.2535, Step Time: 0.0059
+2023-11-29 07:20:28,337: Losses: rec=30.3320, ent=2.1333, nonneg=0.0008, weight=105.7125, total=30.4488, 
+2023-11-29 07:20:28,337: Metrics: num used latents=10.000, discrete_mig=0.337, discrete_mil=0.900, discrete_mod=0.999, SAP_score=0.356, 
+2023-11-29 07:20:33,790: Step: 105000, Gradient Time: 0.0037, Summary Time: 0.2523, Step Time: 0.0052
+2023-11-29 07:20:33,790: Losses: rec=30.5306, ent=2.0748, nonneg=0.0003, weight=105.5385, total=30.6466, 
+2023-11-29 07:20:33,790: Metrics: num used latents=10.000, discrete_mig=0.331, discrete_mil=0.902, discrete_mod=0.999, SAP_score=0.354, 
+2023-11-29 07:20:39,278: Step: 106000, Gradient Time: 0.0037, Summary Time: 0.2562, Step Time: 0.0052
+2023-11-29 07:20:39,278: Losses: rec=30.2519, ent=2.1326, nonneg=0.0004, weight=105.4281, total=30.3682, 
+2023-11-29 07:20:39,278: Metrics: num used latents=10.000, discrete_mig=0.329, discrete_mil=0.905, discrete_mod=1.000, SAP_score=0.352, 
+2023-11-29 07:20:40,597: Epoch: 034
+2023-11-29 07:20:45,413: Step: 107000, Gradient Time: 0.0037, Summary Time: 0.2593, Step Time: 0.0059
+2023-11-29 07:20:45,413: Losses: rec=30.5527, ent=2.0148, nonneg=0.0000, weight=105.5457, total=30.6684, 
+2023-11-29 07:20:45,413: Metrics: num used latents=10.000, discrete_mig=0.325, discrete_mil=0.906, discrete_mod=1.000, SAP_score=0.350, 
+2023-11-29 07:20:50,878: Step: 108000, Gradient Time: 0.0037, Summary Time: 0.2628, Step Time: 0.0052
+2023-11-29 07:20:50,879: Losses: rec=30.7792, ent=1.9994, nonneg=0.0015, weight=105.2486, total=30.8952, 
+2023-11-29 07:20:50,879: Metrics: num used latents=10.000, discrete_mig=0.324, discrete_mil=0.907, discrete_mod=1.000, SAP_score=0.350, 
+2023-11-29 07:20:56,373: Step: 109000, Gradient Time: 0.0037, Summary Time: 0.2518, Step Time: 0.0052
+2023-11-29 07:20:56,373: Losses: rec=30.7296, ent=2.0413, nonneg=0.0010, weight=105.2574, total=30.8455, 
+2023-11-29 07:20:56,373: Metrics: num used latents=10.000, discrete_mig=0.316, discrete_mil=0.909, discrete_mod=1.000, SAP_score=0.348, 
+2023-11-29 07:20:58,338: Epoch: 035
+2023-11-29 07:21:02,503: Step: 110000, Gradient Time: 0.0037, Summary Time: 0.2516, Step Time: 0.0059
+2023-11-29 07:21:02,504: Losses: rec=30.3496, ent=2.0748, nonneg=0.0004, weight=105.1825, total=30.4654, 
+2023-11-29 07:21:02,504: Metrics: num used latents=10.000, discrete_mig=0.315, discrete_mil=0.910, discrete_mod=1.000, SAP_score=0.347, 
+2023-11-29 07:21:07,976: Step: 111000, Gradient Time: 0.0037, Summary Time: 0.2563, Step Time: 0.0052
+2023-11-29 07:21:07,976: Losses: rec=30.6211, ent=2.0479, nonneg=0.0008, weight=105.2096, total=30.7369, 
+2023-11-29 07:21:07,976: Metrics: num used latents=10.000, discrete_mig=0.310, discrete_mil=0.912, discrete_mod=1.000, SAP_score=0.345, 
+2023-11-29 07:21:13,463: Step: 112000, Gradient Time: 0.0037, Summary Time: 0.2544, Step Time: 0.0052
+2023-11-29 07:21:13,463: Losses: rec=30.4164, ent=2.1195, nonneg=0.0002, weight=105.1454, total=30.5323, 
+2023-11-29 07:21:13,463: Metrics: num used latents=10.000, discrete_mig=0.305, discrete_mil=0.914, discrete_mod=1.000, SAP_score=0.344, 
+2023-11-29 07:21:16,105: Epoch: 036
+2023-11-29 07:21:19,664: Step: 113000, Gradient Time: 0.0037, Summary Time: 0.2625, Step Time: 0.0059
+2023-11-29 07:21:19,665: Losses: rec=30.5192, ent=2.1463, nonneg=0.0003, weight=105.0942, total=30.6352, 
+2023-11-29 07:21:19,665: Metrics: num used latents=10.000, discrete_mig=0.299, discrete_mil=0.915, discrete_mod=1.000, SAP_score=0.343, 
+2023-11-29 07:21:25,100: Step: 114000, Gradient Time: 0.0037, Summary Time: 0.2552, Step Time: 0.0052
+2023-11-29 07:21:25,101: Losses: rec=30.3159, ent=2.0864, nonneg=0.0002, weight=105.1313, total=30.4315, 
+2023-11-29 07:21:25,101: Metrics: num used latents=10.000, discrete_mig=0.299, discrete_mil=0.916, discrete_mod=1.000, SAP_score=0.343, 
+2023-11-29 07:21:30,630: Step: 115000, Gradient Time: 0.0037, Summary Time: 0.2851, Step Time: 0.0052
+2023-11-29 07:21:30,630: Losses: rec=30.1293, ent=2.2404, nonneg=0.0011, weight=104.9682, total=30.2460, 
+2023-11-29 07:21:30,630: Metrics: num used latents=10.000, discrete_mig=0.295, discrete_mil=0.917, discrete_mod=1.000, SAP_score=0.342, 
+2023-11-29 07:21:33,908: Epoch: 037
+2023-11-29 07:21:36,833: Step: 116000, Gradient Time: 0.0037, Summary Time: 0.2568, Step Time: 0.0059
+2023-11-29 07:21:36,833: Losses: rec=30.3166, ent=2.0445, nonneg=0.0017, weight=104.9338, total=30.4326, 
+2023-11-29 07:21:36,834: Metrics: num used latents=10.000, discrete_mig=0.292, discrete_mil=0.918, discrete_mod=1.000, SAP_score=0.341, 
+2023-11-29 07:21:42,281: Step: 117000, Gradient Time: 0.0037, Summary Time: 0.2592, Step Time: 0.0052
+2023-11-29 07:21:42,281: Losses: rec=31.0013, ent=1.9676, nonneg=0.0007, weight=104.8443, total=31.1164, 
+2023-11-29 07:21:42,281: Metrics: num used latents=10.000, discrete_mig=0.289, discrete_mil=0.919, discrete_mod=1.000, SAP_score=0.341, 
+2023-11-29 07:21:47,869: Step: 118000, Gradient Time: 0.0038, Summary Time: 0.2772, Step Time: 0.0053
+2023-11-29 07:21:47,870: Losses: rec=30.7126, ent=2.0484, nonneg=0.0003, weight=104.8993, total=30.8279, 
+2023-11-29 07:21:47,870: Metrics: num used latents=10.000, discrete_mig=0.286, discrete_mil=0.920, discrete_mod=1.000, SAP_score=0.340, 
+2023-11-29 07:21:51,931: Epoch: 038
+2023-11-29 07:21:54,184: Step: 119000, Gradient Time: 0.0038, Summary Time: 0.2546, Step Time: 0.0060
+2023-11-29 07:21:54,184: Losses: rec=30.5271, ent=1.9940, nonneg=0.0006, weight=104.7693, total=30.6421, 
+2023-11-29 07:21:54,185: Metrics: num used latents=10.000, discrete_mig=0.282, discrete_mil=0.921, discrete_mod=1.000, SAP_score=0.339, 
+2023-11-29 07:21:59,638: Step: 120000, Gradient Time: 0.0037, Summary Time: 0.2551, Step Time: 0.0052
+2023-11-29 07:21:59,639: Losses: rec=30.4790, ent=2.0784, nonneg=0.0002, weight=104.8337, total=30.5944, 
+2023-11-29 07:21:59,639: Metrics: num used latents=10.000, discrete_mig=0.282, discrete_mil=0.922, discrete_mod=1.000, SAP_score=0.339, 
+2023-11-29 07:22:03,493: Step: 120000, save data time 3.85
+2023-11-29 07:22:09,079: Step: 121000, Gradient Time: 0.0037, Summary Time: 0.2572, Step Time: 0.0092
+2023-11-29 07:22:09,080: Losses: rec=30.5498, ent=1.8817, nonneg=0.0001, weight=104.7088, total=30.6639, 
+2023-11-29 07:22:09,080: Metrics: num used latents=10.000, discrete_mig=0.282, discrete_mil=0.922, discrete_mod=1.000, SAP_score=0.339, 
+2023-11-29 07:22:13,787: Epoch: 039
+2023-11-29 07:22:15,436: Step: 122000, Gradient Time: 0.0038, Summary Time: 0.2728, Step Time: 0.0061
+2023-11-29 07:22:15,436: Losses: rec=30.5173, ent=1.9616, nonneg=0.0008, weight=104.6543, total=30.6321, 
+2023-11-29 07:22:15,437: Metrics: num used latents=10.000, discrete_mig=0.277, discrete_mil=0.923, discrete_mod=1.000, SAP_score=0.339, 
+2023-11-29 07:22:20,860: Step: 123000, Gradient Time: 0.0037, Summary Time: 0.2650, Step Time: 0.0051
+2023-11-29 07:22:20,861: Losses: rec=30.3535, ent=2.0415, nonneg=0.0014, weight=104.6312, total=30.4690, 
+2023-11-29 07:22:20,861: Metrics: num used latents=10.000, discrete_mig=0.276, discrete_mil=0.923, discrete_mod=1.000, SAP_score=0.338, 
+2023-11-29 07:22:26,249: Step: 124000, Gradient Time: 0.0036, Summary Time: 0.2522, Step Time: 0.0051
+2023-11-29 07:22:26,249: Losses: rec=30.6515, ent=2.0496, nonneg=0.0001, weight=104.5992, total=30.7663, 
+2023-11-29 07:22:26,249: Metrics: num used latents=10.000, discrete_mig=0.269, discrete_mil=0.923, discrete_mod=1.000, SAP_score=0.337, 
+2023-11-29 07:22:31,579: Epoch: 040
+2023-11-29 07:22:32,561: Step: 125000, Gradient Time: 0.0038, Summary Time: 0.3250, Step Time: 0.0060
+2023-11-29 07:22:32,561: Losses: rec=30.6201, ent=2.0178, nonneg=0.0001, weight=104.4743, total=30.7347, 
+2023-11-29 07:22:32,561: Metrics: num used latents=10.000, discrete_mig=0.272, discrete_mil=0.923, discrete_mod=1.000, SAP_score=0.338, 
+2023-11-29 07:22:38,018: Step: 126000, Gradient Time: 0.0037, Summary Time: 0.2533, Step Time: 0.0052
+2023-11-29 07:22:38,018: Losses: rec=30.3328, ent=2.0250, nonneg=0.0008, weight=104.5608, total=30.4479, 
+2023-11-29 07:22:38,019: Metrics: num used latents=10.000, discrete_mig=0.271, discrete_mil=0.925, discrete_mod=1.000, SAP_score=0.337, 
+2023-11-29 07:22:43,503: Step: 127000, Gradient Time: 0.0037, Summary Time: 0.2673, Step Time: 0.0052
+2023-11-29 07:22:43,504: Losses: rec=30.2902, ent=2.0375, nonneg=0.0004, weight=104.4807, total=30.4051, 
+2023-11-29 07:22:43,504: Metrics: num used latents=10.000, discrete_mig=0.271, discrete_mil=0.925, discrete_mod=1.000, SAP_score=0.337, 
+2023-11-29 07:22:49,019: Step: 128000, Gradient Time: 0.0037, Summary Time: 0.2657, Step Time: 0.0052
+2023-11-29 07:22:49,020: Losses: rec=30.7214, ent=1.8885, nonneg=0.0009, weight=104.4535, total=30.8357, 
+2023-11-29 07:22:49,020: Metrics: num used latents=10.000, discrete_mig=0.272, discrete_mil=0.925, discrete_mod=1.000, SAP_score=0.337, 
+2023-11-29 07:22:49,672: Epoch: 041
+2023-11-29 07:22:55,108: Step: 129000, Gradient Time: 0.0037, Summary Time: 0.2586, Step Time: 0.0058
+2023-11-29 07:22:55,108: Losses: rec=30.6096, ent=1.9108, nonneg=0.0006, weight=104.2990, total=30.7237, 
+2023-11-29 07:22:55,108: Metrics: num used latents=10.000, discrete_mig=0.269, discrete_mil=0.925, discrete_mod=1.000, SAP_score=0.337, 
+2023-11-29 07:23:00,541: Step: 130000, Gradient Time: 0.0037, Summary Time: 0.2552, Step Time: 0.0052
+2023-11-29 07:23:00,541: Losses: rec=30.3237, ent=2.2014, nonneg=0.0010, weight=104.3886, total=30.4396, 
+2023-11-29 07:23:00,542: Metrics: num used latents=10.000, discrete_mig=0.270, discrete_mil=0.926, discrete_mod=1.000, SAP_score=0.336, 
+2023-11-29 07:23:06,105: Step: 131000, Gradient Time: 0.0037, Summary Time: 0.2647, Step Time: 0.0053
+2023-11-29 07:23:06,105: Losses: rec=30.6394, ent=1.9559, nonneg=0.0003, weight=104.3191, total=30.7536, 
+2023-11-29 07:23:06,105: Metrics: num used latents=10.000, discrete_mig=0.264, discrete_mil=0.926, discrete_mod=1.000, SAP_score=0.336, 
+2023-11-29 07:23:07,387: Epoch: 042
+2023-11-29 07:23:12,176: Step: 132000, Gradient Time: 0.0036, Summary Time: 0.2554, Step Time: 0.0058
+2023-11-29 07:23:12,176: Losses: rec=30.4422, ent=1.9962, nonneg=0.0007, weight=104.2811, total=30.5568, 
+2023-11-29 07:23:12,176: Metrics: num used latents=10.000, discrete_mig=0.266, discrete_mil=0.926, discrete_mod=1.000, SAP_score=0.336, 
+2023-11-29 07:23:17,582: Step: 133000, Gradient Time: 0.0036, Summary Time: 0.2514, Step Time: 0.0051
+2023-11-29 07:23:17,582: Losses: rec=30.6558, ent=2.0182, nonneg=0.0005, weight=104.2176, total=30.7704, 
+2023-11-29 07:23:17,582: Metrics: num used latents=10.000, discrete_mig=0.265, discrete_mil=0.927, discrete_mod=1.000, SAP_score=0.336, 
+2023-11-29 07:23:23,027: Step: 134000, Gradient Time: 0.0036, Summary Time: 0.2512, Step Time: 0.0052
+2023-11-29 07:23:23,028: Losses: rec=30.5695, ent=2.0128, nonneg=0.0004, weight=104.2121, total=30.6840, 
+2023-11-29 07:23:23,028: Metrics: num used latents=10.000, discrete_mig=0.264, discrete_mil=0.927, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:24,974: Epoch: 043
+2023-11-29 07:23:29,092: Step: 135000, Gradient Time: 0.0036, Summary Time: 0.2486, Step Time: 0.0058
+2023-11-29 07:23:29,092: Losses: rec=30.2735, ent=1.9672, nonneg=0.0001, weight=104.1544, total=30.3876, 
+2023-11-29 07:23:29,093: Metrics: num used latents=10.000, discrete_mig=0.261, discrete_mil=0.927, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:34,558: Step: 136000, Gradient Time: 0.0037, Summary Time: 0.2593, Step Time: 0.0052
+2023-11-29 07:23:34,558: Losses: rec=30.4876, ent=2.0984, nonneg=0.0006, weight=104.2341, total=30.6027, 
+2023-11-29 07:23:34,558: Metrics: num used latents=10.000, discrete_mig=0.264, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:39,996: Step: 137000, Gradient Time: 0.0036, Summary Time: 0.2532, Step Time: 0.0052
+2023-11-29 07:23:39,996: Losses: rec=30.2763, ent=2.2218, nonneg=0.0003, weight=104.1268, total=30.3917, 
+2023-11-29 07:23:39,996: Metrics: num used latents=10.000, discrete_mig=0.264, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:42,597: Epoch: 044
+2023-11-29 07:23:46,099: Step: 138000, Gradient Time: 0.0037, Summary Time: 0.2503, Step Time: 0.0058
+2023-11-29 07:23:46,099: Losses: rec=30.6975, ent=1.9720, nonneg=0.0003, weight=104.0983, total=30.8115, 
+2023-11-29 07:23:46,099: Metrics: num used latents=10.000, discrete_mig=0.262, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:51,497: Step: 139000, Gradient Time: 0.0036, Summary Time: 0.2564, Step Time: 0.0051
+2023-11-29 07:23:51,497: Losses: rec=30.4052, ent=2.1449, nonneg=0.0006, weight=104.0370, total=30.5202, 
+2023-11-29 07:23:51,497: Metrics: num used latents=10.000, discrete_mig=0.261, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:23:56,942: Step: 140000, Gradient Time: 0.0036, Summary Time: 0.2571, Step Time: 0.0052
+2023-11-29 07:23:56,942: Losses: rec=30.5526, ent=2.0897, nonneg=0.0000, weight=104.0363, total=30.6671, 
+2023-11-29 07:23:56,942: Metrics: num used latents=10.000, discrete_mig=0.262, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:24:00,568: Step: 140000, save data time 3.63
+2023-11-29 07:24:03,820: Epoch: 045
+2023-11-29 07:24:06,674: Step: 141000, Gradient Time: 0.0037, Summary Time: 0.2523, Step Time: 0.0095
+2023-11-29 07:24:06,674: Losses: rec=30.5404, ent=2.1165, nonneg=0.0005, weight=104.0263, total=30.6552, 
+2023-11-29 07:24:06,674: Metrics: num used latents=10.000, discrete_mig=0.260, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.335, 
+2023-11-29 07:24:12,005: Step: 142000, Gradient Time: 0.0036, Summary Time: 0.2551, Step Time: 0.0051
+2023-11-29 07:24:12,005: Losses: rec=30.6305, ent=2.0541, nonneg=0.0009, weight=103.9907, total=30.7452, 
+2023-11-29 07:24:12,005: Metrics: num used latents=10.000, discrete_mig=0.259, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:17,389: Step: 143000, Gradient Time: 0.0036, Summary Time: 0.2503, Step Time: 0.0051
+2023-11-29 07:24:17,389: Losses: rec=30.1658, ent=2.1337, nonneg=0.0001, weight=103.9619, total=30.2805, 
+2023-11-29 07:24:17,389: Metrics: num used latents=10.000, discrete_mig=0.258, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:21,275: Epoch: 046
+2023-11-29 07:24:23,573: Step: 144000, Gradient Time: 0.0037, Summary Time: 0.2828, Step Time: 0.0059
+2023-11-29 07:24:23,573: Losses: rec=30.5728, ent=2.0871, nonneg=0.0009, weight=103.9970, total=30.6876, 
+2023-11-29 07:24:23,573: Metrics: num used latents=10.000, discrete_mig=0.255, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:29,124: Step: 145000, Gradient Time: 0.0038, Summary Time: 0.2580, Step Time: 0.0053
+2023-11-29 07:24:29,124: Losses: rec=30.4149, ent=2.0856, nonneg=0.0009, weight=103.8910, total=30.5296, 
+2023-11-29 07:24:29,124: Metrics: num used latents=10.000, discrete_mig=0.255, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:34,613: Step: 146000, Gradient Time: 0.0037, Summary Time: 0.2560, Step Time: 0.0052
+2023-11-29 07:24:34,614: Losses: rec=30.9204, ent=2.0096, nonneg=0.0001, weight=103.7539, total=31.0342, 
+2023-11-29 07:24:34,614: Metrics: num used latents=10.000, discrete_mig=0.254, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:39,180: Epoch: 047
+2023-11-29 07:24:40,782: Step: 147000, Gradient Time: 0.0037, Summary Time: 0.2521, Step Time: 0.0059
+2023-11-29 07:24:40,782: Losses: rec=30.3059, ent=1.9777, nonneg=0.0004, weight=103.8585, total=30.4198, 
+2023-11-29 07:24:40,782: Metrics: num used latents=10.000, discrete_mig=0.256, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:46,219: Step: 148000, Gradient Time: 0.0037, Summary Time: 0.2514, Step Time: 0.0052
+2023-11-29 07:24:46,219: Losses: rec=30.1759, ent=2.2005, nonneg=0.0001, weight=103.8345, total=30.2908, 
+2023-11-29 07:24:46,220: Metrics: num used latents=10.000, discrete_mig=0.254, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.334, 
+2023-11-29 07:24:51,675: Step: 149000, Gradient Time: 0.0037, Summary Time: 0.2638, Step Time: 0.0052
+2023-11-29 07:24:51,676: Losses: rec=30.6015, ent=2.0038, nonneg=0.0018, weight=103.7170, total=30.7161, 
+2023-11-29 07:24:51,676: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:24:56,916: Epoch: 048
+2023-11-29 07:24:57,878: Step: 150000, Gradient Time: 0.0037, Summary Time: 0.3161, Step Time: 0.0059
+2023-11-29 07:24:57,879: Losses: rec=30.5750, ent=2.1407, nonneg=0.0009, weight=103.7160, total=30.6899, 
+2023-11-29 07:24:57,879: Metrics: num used latents=10.000, discrete_mig=0.250, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:03,350: Step: 151000, Gradient Time: 0.0037, Summary Time: 0.2571, Step Time: 0.0052
+2023-11-29 07:25:03,350: Losses: rec=30.6453, ent=2.0619, nonneg=0.0003, weight=103.7358, total=30.7595, 
+2023-11-29 07:25:03,350: Metrics: num used latents=10.000, discrete_mig=0.252, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:08,780: Step: 152000, Gradient Time: 0.0037, Summary Time: 0.2536, Step Time: 0.0052
+2023-11-29 07:25:08,780: Losses: rec=30.6871, ent=2.0359, nonneg=0.0002, weight=103.6375, total=30.8010, 
+2023-11-29 07:25:08,780: Metrics: num used latents=10.000, discrete_mig=0.252, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:14,279: Step: 153000, Gradient Time: 0.0037, Summary Time: 0.2604, Step Time: 0.0052
+2023-11-29 07:25:14,279: Losses: rec=30.3306, ent=2.2389, nonneg=0.0001, weight=103.6790, total=30.4455, 
+2023-11-29 07:25:14,279: Metrics: num used latents=10.000, discrete_mig=0.253, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:14,942: Epoch: 049
+2023-11-29 07:25:20,434: Step: 154000, Gradient Time: 0.0037, Summary Time: 0.2583, Step Time: 0.0059
+2023-11-29 07:25:20,434: Losses: rec=30.6497, ent=1.8969, nonneg=0.0005, weight=103.6239, total=30.7631, 
+2023-11-29 07:25:20,434: Metrics: num used latents=10.000, discrete_mig=0.255, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:25,923: Step: 155000, Gradient Time: 0.0037, Summary Time: 0.2890, Step Time: 0.0052
+2023-11-29 07:25:25,923: Losses: rec=30.5387, ent=2.1530, nonneg=0.0006, weight=103.5605, total=30.6533, 
+2023-11-29 07:25:25,923: Metrics: num used latents=10.000, discrete_mig=0.255, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.333, 
+2023-11-29 07:25:31,629: Step: 156000, Gradient Time: 0.0039, Summary Time: 0.2615, Step Time: 0.0054
+2023-11-29 07:25:31,629: Losses: rec=30.5545, ent=2.0915, nonneg=0.0004, weight=103.5927, total=30.6687, 
+2023-11-29 07:25:31,629: Metrics: num used latents=10.000, discrete_mig=0.250, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:25:32,925: Epoch: 050
+2023-11-29 07:25:37,727: Step: 157000, Gradient Time: 0.0037, Summary Time: 0.2556, Step Time: 0.0058
+2023-11-29 07:25:37,728: Losses: rec=30.0394, ent=2.1997, nonneg=0.0007, weight=103.6062, total=30.1543, 
+2023-11-29 07:25:37,728: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:25:43,205: Step: 158000, Gradient Time: 0.0037, Summary Time: 0.2584, Step Time: 0.0052
+2023-11-29 07:25:43,205: Losses: rec=30.7561, ent=1.9268, nonneg=0.0005, weight=103.4581, total=30.8694, 
+2023-11-29 07:25:43,205: Metrics: num used latents=10.000, discrete_mig=0.251, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:25:48,692: Step: 159000, Gradient Time: 0.0037, Summary Time: 0.2585, Step Time: 0.0052
+2023-11-29 07:25:48,693: Losses: rec=30.8287, ent=2.1248, nonneg=0.0010, weight=103.5305, total=30.9434, 
+2023-11-29 07:25:48,693: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:25:50,658: Epoch: 051
+2023-11-29 07:25:54,916: Step: 160000, Gradient Time: 0.0038, Summary Time: 0.2512, Step Time: 0.0060
+2023-11-29 07:25:54,916: Losses: rec=30.8605, ent=2.1004, nonneg=0.0001, weight=103.5551, total=30.9746, 
+2023-11-29 07:25:54,916: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:25:58,843: Step: 160000, save data time 3.93
+2023-11-29 07:26:04,445: Step: 161000, Gradient Time: 0.0038, Summary Time: 0.2600, Step Time: 0.0092
+2023-11-29 07:26:04,446: Losses: rec=30.5722, ent=2.0986, nonneg=0.0000, weight=103.4974, total=30.6862, 
+2023-11-29 07:26:04,446: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:10,045: Step: 162000, Gradient Time: 0.0038, Summary Time: 0.2469, Step Time: 0.0053
+2023-11-29 07:26:10,045: Losses: rec=30.5463, ent=2.0568, nonneg=0.0009, weight=103.4265, total=30.6604, 
+2023-11-29 07:26:10,045: Metrics: num used latents=10.000, discrete_mig=0.248, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:12,688: Epoch: 052
+2023-11-29 07:26:16,244: Step: 163000, Gradient Time: 0.0037, Summary Time: 0.2634, Step Time: 0.0059
+2023-11-29 07:26:16,245: Losses: rec=30.4671, ent=2.1595, nonneg=0.0006, weight=103.4238, total=30.5817, 
+2023-11-29 07:26:16,245: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:21,655: Step: 164000, Gradient Time: 0.0037, Summary Time: 0.2559, Step Time: 0.0051
+2023-11-29 07:26:21,655: Losses: rec=30.8337, ent=2.0088, nonneg=0.0001, weight=103.3642, total=30.9472, 
+2023-11-29 07:26:21,655: Metrics: num used latents=10.000, discrete_mig=0.248, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:27,068: Step: 165000, Gradient Time: 0.0036, Summary Time: 0.2574, Step Time: 0.0051
+2023-11-29 07:26:27,068: Losses: rec=30.5370, ent=2.2175, nonneg=0.0003, weight=103.3945, total=30.6516, 
+2023-11-29 07:26:27,068: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:30,332: Epoch: 053
+2023-11-29 07:26:33,233: Step: 166000, Gradient Time: 0.0037, Summary Time: 0.2505, Step Time: 0.0059
+2023-11-29 07:26:33,233: Losses: rec=30.7102, ent=2.1448, nonneg=0.0000, weight=103.4080, total=30.8243, 
+2023-11-29 07:26:33,233: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:38,650: Step: 167000, Gradient Time: 0.0037, Summary Time: 0.2525, Step Time: 0.0051
+2023-11-29 07:26:38,650: Losses: rec=30.4656, ent=2.0412, nonneg=0.0005, weight=103.3008, total=30.5793, 
+2023-11-29 07:26:38,650: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:44,074: Step: 168000, Gradient Time: 0.0036, Summary Time: 0.2561, Step Time: 0.0051
+2023-11-29 07:26:44,074: Losses: rec=30.3402, ent=2.1429, nonneg=0.0000, weight=103.3040, total=30.4543, 
+2023-11-29 07:26:44,074: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:26:47,990: Epoch: 054
+2023-11-29 07:26:50,222: Step: 169000, Gradient Time: 0.0037, Summary Time: 0.2613, Step Time: 0.0059
+2023-11-29 07:26:50,222: Losses: rec=30.7324, ent=2.0313, nonneg=0.0001, weight=103.3145, total=30.8459, 
+2023-11-29 07:26:50,222: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:26:55,618: Step: 170000, Gradient Time: 0.0036, Summary Time: 0.2562, Step Time: 0.0051
+2023-11-29 07:26:55,618: Losses: rec=30.7261, ent=2.1251, nonneg=0.0001, weight=103.2218, total=30.8400, 
+2023-11-29 07:26:55,618: Metrics: num used latents=10.000, discrete_mig=0.249, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.332, 
+2023-11-29 07:27:01,125: Step: 171000, Gradient Time: 0.0037, Summary Time: 0.2517, Step Time: 0.0052
+2023-11-29 07:27:01,125: Losses: rec=30.5549, ent=2.1040, nonneg=0.0014, weight=103.2513, total=30.6693, 
+2023-11-29 07:27:01,125: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:05,685: Epoch: 055
+2023-11-29 07:27:07,280: Step: 172000, Gradient Time: 0.0037, Summary Time: 0.2604, Step Time: 0.0059
+2023-11-29 07:27:07,281: Losses: rec=30.2501, ent=2.1458, nonneg=0.0009, weight=103.2150, total=30.3645, 
+2023-11-29 07:27:07,281: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:12,659: Step: 173000, Gradient Time: 0.0036, Summary Time: 0.2504, Step Time: 0.0051
+2023-11-29 07:27:12,660: Losses: rec=30.5013, ent=2.1525, nonneg=0.0000, weight=103.1470, total=30.6152, 
+2023-11-29 07:27:12,660: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:18,076: Step: 174000, Gradient Time: 0.0036, Summary Time: 0.2555, Step Time: 0.0051
+2023-11-29 07:27:18,076: Losses: rec=30.1215, ent=2.1818, nonneg=0.0009, weight=103.1930, total=30.2360, 
+2023-11-29 07:27:18,077: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:23,260: Epoch: 056
+2023-11-29 07:27:24,225: Step: 175000, Gradient Time: 0.0037, Summary Time: 0.3177, Step Time: 0.0058
+2023-11-29 07:27:24,225: Losses: rec=30.7147, ent=2.1340, nonneg=0.0004, weight=103.1572, total=30.8287, 
+2023-11-29 07:27:24,225: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:29,703: Step: 176000, Gradient Time: 0.0037, Summary Time: 0.2543, Step Time: 0.0052
+2023-11-29 07:27:29,703: Losses: rec=30.4591, ent=2.1141, nonneg=0.0007, weight=103.1913, total=30.5732, 
+2023-11-29 07:27:29,703: Metrics: num used latents=10.000, discrete_mig=0.245, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:35,151: Step: 177000, Gradient Time: 0.0037, Summary Time: 0.2546, Step Time: 0.0052
+2023-11-29 07:27:35,152: Losses: rec=30.9661, ent=2.0259, nonneg=0.0006, weight=103.1574, total=31.0796, 
+2023-11-29 07:27:35,152: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:40,643: Step: 178000, Gradient Time: 0.0037, Summary Time: 0.2502, Step Time: 0.0052
+2023-11-29 07:27:40,643: Losses: rec=30.4651, ent=2.2109, nonneg=0.0005, weight=103.1348, total=30.5795, 
+2023-11-29 07:27:40,643: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:41,270: Epoch: 057
+2023-11-29 07:27:46,782: Step: 179000, Gradient Time: 0.0037, Summary Time: 0.2522, Step Time: 0.0059
+2023-11-29 07:27:46,782: Losses: rec=30.4708, ent=2.0017, nonneg=0.0005, weight=103.1382, total=30.5842, 
+2023-11-29 07:27:46,782: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:27:52,205: Step: 180000, Gradient Time: 0.0036, Summary Time: 0.2679, Step Time: 0.0051
+2023-11-29 07:27:52,205: Losses: rec=30.3287, ent=2.2265, nonneg=0.0003, weight=103.0208, total=30.4429, 
+2023-11-29 07:27:52,205: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:27:55,879: Step: 180000, save data time 3.67
+2023-11-29 07:28:01,332: Step: 181000, Gradient Time: 0.0036, Summary Time: 0.2585, Step Time: 0.0088
+2023-11-29 07:28:01,332: Losses: rec=30.5562, ent=2.1500, nonneg=0.0012, weight=103.0383, total=30.6706, 
+2023-11-29 07:28:01,332: Metrics: num used latents=10.000, discrete_mig=0.246, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:02,619: Epoch: 058
+2023-11-29 07:28:07,414: Step: 182000, Gradient Time: 0.0037, Summary Time: 0.2494, Step Time: 0.0058
+2023-11-29 07:28:07,414: Losses: rec=30.0464, ent=2.1889, nonneg=0.0003, weight=103.0259, total=30.1605, 
+2023-11-29 07:28:07,415: Metrics: num used latents=10.000, discrete_mig=0.245, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:12,817: Step: 183000, Gradient Time: 0.0037, Summary Time: 0.2588, Step Time: 0.0051
+2023-11-29 07:28:12,818: Losses: rec=30.1849, ent=2.1788, nonneg=0.0004, weight=103.0200, total=30.2991, 
+2023-11-29 07:28:12,818: Metrics: num used latents=10.000, discrete_mig=0.250, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:18,249: Step: 184000, Gradient Time: 0.0037, Summary Time: 0.2552, Step Time: 0.0052
+2023-11-29 07:28:18,249: Losses: rec=30.8390, ent=2.0243, nonneg=0.0002, weight=103.0157, total=30.9523, 
+2023-11-29 07:28:18,249: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:20,176: Epoch: 059
+2023-11-29 07:28:24,339: Step: 185000, Gradient Time: 0.0037, Summary Time: 0.2511, Step Time: 0.0058
+2023-11-29 07:28:24,340: Losses: rec=30.4312, ent=2.0108, nonneg=0.0001, weight=102.9999, total=30.5443, 
+2023-11-29 07:28:24,340: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:29,802: Step: 186000, Gradient Time: 0.0037, Summary Time: 0.2538, Step Time: 0.0052
+2023-11-29 07:28:29,802: Losses: rec=30.6719, ent=1.9928, nonneg=0.0000, weight=102.9565, total=30.7848, 
+2023-11-29 07:28:29,802: Metrics: num used latents=10.000, discrete_mig=0.245, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:35,241: Step: 187000, Gradient Time: 0.0037, Summary Time: 0.2517, Step Time: 0.0052
+2023-11-29 07:28:35,242: Losses: rec=30.6157, ent=2.2331, nonneg=0.0003, weight=102.9334, total=30.7299, 
+2023-11-29 07:28:35,242: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:37,894: Epoch: 060
+2023-11-29 07:28:41,421: Step: 188000, Gradient Time: 0.0037, Summary Time: 0.2566, Step Time: 0.0059
+2023-11-29 07:28:41,421: Losses: rec=30.6220, ent=2.0462, nonneg=0.0010, weight=102.9314, total=30.7356, 
+2023-11-29 07:28:41,421: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:28:46,756: Step: 189000, Gradient Time: 0.0036, Summary Time: 0.2478, Step Time: 0.0051
+2023-11-29 07:28:46,756: Losses: rec=30.6579, ent=2.0183, nonneg=0.0005, weight=102.9156, total=30.7712, 
+2023-11-29 07:28:46,757: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:28:52,166: Step: 190000, Gradient Time: 0.0036, Summary Time: 0.2543, Step Time: 0.0051
+2023-11-29 07:28:52,166: Losses: rec=30.0497, ent=2.2938, nonneg=0.0002, weight=102.9222, total=30.1641, 
+2023-11-29 07:28:52,166: Metrics: num used latents=10.000, discrete_mig=0.239, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:28:55,386: Epoch: 061
+2023-11-29 07:28:58,270: Step: 191000, Gradient Time: 0.0036, Summary Time: 0.2510, Step Time: 0.0058
+2023-11-29 07:28:58,271: Losses: rec=30.8479, ent=2.0417, nonneg=0.0001, weight=102.8187, total=30.9611, 
+2023-11-29 07:28:58,271: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:03,606: Step: 192000, Gradient Time: 0.0036, Summary Time: 0.2554, Step Time: 0.0051
+2023-11-29 07:29:03,606: Losses: rec=30.7880, ent=2.0465, nonneg=0.0004, weight=102.9003, total=30.9013, 
+2023-11-29 07:29:03,606: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:29:08,988: Step: 193000, Gradient Time: 0.0036, Summary Time: 0.2528, Step Time: 0.0051
+2023-11-29 07:29:08,988: Losses: rec=30.4591, ent=2.2004, nonneg=0.0004, weight=102.8586, total=30.5732, 
+2023-11-29 07:29:08,988: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:12,886: Epoch: 062
+2023-11-29 07:29:15,154: Step: 194000, Gradient Time: 0.0037, Summary Time: 0.2513, Step Time: 0.0059
+2023-11-29 07:29:15,154: Losses: rec=30.9396, ent=1.9498, nonneg=0.0011, weight=102.8351, total=31.0528, 
+2023-11-29 07:29:15,154: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:20,511: Step: 195000, Gradient Time: 0.0036, Summary Time: 0.2538, Step Time: 0.0051
+2023-11-29 07:29:20,512: Losses: rec=30.9601, ent=2.2365, nonneg=0.0002, weight=102.8639, total=31.0742, 
+2023-11-29 07:29:20,512: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:25,940: Step: 196000, Gradient Time: 0.0037, Summary Time: 0.2548, Step Time: 0.0052
+2023-11-29 07:29:25,940: Losses: rec=30.4504, ent=2.1709, nonneg=0.0007, weight=102.7779, total=30.5644, 
+2023-11-29 07:29:25,940: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:29:30,529: Epoch: 063
+2023-11-29 07:29:32,186: Step: 197000, Gradient Time: 0.0037, Summary Time: 0.2539, Step Time: 0.0060
+2023-11-29 07:29:32,186: Losses: rec=30.2681, ent=2.1024, nonneg=0.0003, weight=102.8252, total=30.3816, 
+2023-11-29 07:29:32,186: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:37,542: Step: 198000, Gradient Time: 0.0036, Summary Time: 0.2598, Step Time: 0.0051
+2023-11-29 07:29:37,542: Losses: rec=30.4886, ent=1.9816, nonneg=0.0000, weight=102.7782, total=30.6013, 
+2023-11-29 07:29:37,542: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:29:42,915: Step: 199000, Gradient Time: 0.0036, Summary Time: 0.2623, Step Time: 0.0051
+2023-11-29 07:29:42,915: Losses: rec=30.5934, ent=2.0690, nonneg=0.0002, weight=102.7442, total=30.7066, 
+2023-11-29 07:29:42,915: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:48,093: Epoch: 064
+2023-11-29 07:29:49,084: Step: 200000, Gradient Time: 0.0037, Summary Time: 0.3229, Step Time: 0.0058
+2023-11-29 07:29:49,085: Losses: rec=30.6721, ent=2.1603, nonneg=0.0003, weight=102.6789, total=30.7858, 
+2023-11-29 07:29:49,085: Metrics: num used latents=10.000, discrete_mig=0.237, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:29:52,842: Step: 200000, save data time 3.76
+2023-11-29 07:29:58,229: Step: 201000, Gradient Time: 0.0036, Summary Time: 0.2448, Step Time: 0.0089
+2023-11-29 07:29:58,229: Losses: rec=30.5332, ent=2.0554, nonneg=0.0005, weight=102.7513, total=30.6465, 
+2023-11-29 07:29:58,229: Metrics: num used latents=10.000, discrete_mig=0.247, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:30:03,633: Step: 202000, Gradient Time: 0.0036, Summary Time: 0.2469, Step Time: 0.0051
+2023-11-29 07:30:03,633: Losses: rec=30.6718, ent=2.0361, nonneg=0.0012, weight=102.6414, total=30.7852, 
+2023-11-29 07:30:03,633: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:09,154: Step: 203000, Gradient Time: 0.0037, Summary Time: 0.2514, Step Time: 0.0053
+2023-11-29 07:30:09,154: Losses: rec=30.6650, ent=2.0210, nonneg=0.0010, weight=102.7142, total=30.7783, 
+2023-11-29 07:30:09,154: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:09,806: Epoch: 065
+2023-11-29 07:30:15,267: Step: 204000, Gradient Time: 0.0037, Summary Time: 0.2551, Step Time: 0.0058
+2023-11-29 07:30:15,267: Losses: rec=30.0994, ent=2.2705, nonneg=0.0001, weight=102.7227, total=30.2135, 
+2023-11-29 07:30:15,267: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:20,671: Step: 205000, Gradient Time: 0.0036, Summary Time: 0.2554, Step Time: 0.0051
+2023-11-29 07:30:20,672: Losses: rec=30.7487, ent=2.0889, nonneg=0.0006, weight=102.6691, total=30.8621, 
+2023-11-29 07:30:20,672: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:26,169: Step: 206000, Gradient Time: 0.0037, Summary Time: 0.2519, Step Time: 0.0052
+2023-11-29 07:30:26,170: Losses: rec=30.5416, ent=2.2072, nonneg=0.0001, weight=102.7564, total=30.6555, 
+2023-11-29 07:30:26,170: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:27,470: Epoch: 066
+2023-11-29 07:30:32,287: Step: 207000, Gradient Time: 0.0037, Summary Time: 0.2530, Step Time: 0.0058
+2023-11-29 07:30:32,287: Losses: rec=30.5085, ent=2.1218, nonneg=0.0002, weight=102.6542, total=30.6219, 
+2023-11-29 07:30:32,287: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:37,691: Step: 208000, Gradient Time: 0.0036, Summary Time: 0.2467, Step Time: 0.0051
+2023-11-29 07:30:37,691: Losses: rec=30.6605, ent=1.9787, nonneg=0.0006, weight=102.6400, total=30.7734, 
+2023-11-29 07:30:37,691: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:43,186: Step: 209000, Gradient Time: 0.0037, Summary Time: 0.2522, Step Time: 0.0052
+2023-11-29 07:30:43,186: Losses: rec=30.8866, ent=2.0610, nonneg=0.0001, weight=102.6073, total=30.9996, 
+2023-11-29 07:30:43,186: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:45,137: Epoch: 067
+2023-11-29 07:30:49,282: Step: 210000, Gradient Time: 0.0037, Summary Time: 0.2506, Step Time: 0.0058
+2023-11-29 07:30:49,282: Losses: rec=30.3979, ent=2.2126, nonneg=0.0005, weight=102.5958, total=30.5118, 
+2023-11-29 07:30:49,282: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:30:54,705: Step: 211000, Gradient Time: 0.0036, Summary Time: 0.2542, Step Time: 0.0052
+2023-11-29 07:30:54,705: Losses: rec=30.4042, ent=2.1337, nonneg=0.0002, weight=102.6645, total=30.5176, 
+2023-11-29 07:30:54,705: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:00,147: Step: 212000, Gradient Time: 0.0036, Summary Time: 0.2497, Step Time: 0.0052
+2023-11-29 07:31:00,148: Losses: rec=30.5299, ent=2.1545, nonneg=0.0003, weight=102.5885, total=30.6434, 
+2023-11-29 07:31:00,148: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:31:02,759: Epoch: 068
+2023-11-29 07:31:06,251: Step: 213000, Gradient Time: 0.0037, Summary Time: 0.2467, Step Time: 0.0058
+2023-11-29 07:31:06,251: Losses: rec=30.6750, ent=2.2529, nonneg=0.0003, weight=102.5688, total=30.7890, 
+2023-11-29 07:31:06,252: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:11,670: Step: 214000, Gradient Time: 0.0037, Summary Time: 0.2478, Step Time: 0.0052
+2023-11-29 07:31:11,670: Losses: rec=30.5796, ent=1.9611, nonneg=0.0004, weight=102.5365, total=30.6921, 
+2023-11-29 07:31:11,670: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:31:17,135: Step: 215000, Gradient Time: 0.0037, Summary Time: 0.2505, Step Time: 0.0052
+2023-11-29 07:31:17,135: Losses: rec=30.1838, ent=2.1346, nonneg=0.0001, weight=102.5720, total=30.2971, 
+2023-11-29 07:31:17,135: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:20,390: Epoch: 069
+2023-11-29 07:31:23,257: Step: 216000, Gradient Time: 0.0037, Summary Time: 0.2587, Step Time: 0.0058
+2023-11-29 07:31:23,257: Losses: rec=30.3129, ent=2.1703, nonneg=0.0004, weight=102.5468, total=30.4265, 
+2023-11-29 07:31:23,257: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:28,678: Step: 217000, Gradient Time: 0.0036, Summary Time: 0.2745, Step Time: 0.0051
+2023-11-29 07:31:28,678: Losses: rec=30.6401, ent=2.0199, nonneg=0.0005, weight=102.5237, total=30.7530, 
+2023-11-29 07:31:28,678: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:31:34,136: Step: 218000, Gradient Time: 0.0037, Summary Time: 0.2506, Step Time: 0.0052
+2023-11-29 07:31:34,136: Losses: rec=30.5205, ent=2.1822, nonneg=0.0000, weight=102.5177, total=30.6339, 
+2023-11-29 07:31:34,136: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:38,026: Epoch: 070
+2023-11-29 07:31:40,250: Step: 219000, Gradient Time: 0.0037, Summary Time: 0.2493, Step Time: 0.0058
+2023-11-29 07:31:40,250: Losses: rec=30.2867, ent=2.1657, nonneg=0.0001, weight=102.3981, total=30.4000, 
+2023-11-29 07:31:40,250: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:31:45,658: Step: 220000, Gradient Time: 0.0037, Summary Time: 0.2548, Step Time: 0.0051
+2023-11-29 07:31:45,658: Losses: rec=30.5024, ent=2.2389, nonneg=0.0001, weight=102.5446, total=30.6162, 
+2023-11-29 07:31:45,659: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:31:49,330: Step: 220000, save data time 3.67
+2023-11-29 07:31:54,796: Step: 221000, Gradient Time: 0.0037, Summary Time: 0.2738, Step Time: 0.0088
+2023-11-29 07:31:54,796: Losses: rec=30.9664, ent=2.0928, nonneg=0.0003, weight=102.5065, total=31.0796, 
+2023-11-29 07:31:54,796: Metrics: num used latents=10.000, discrete_mig=0.237, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:31:59,397: Epoch: 071
+2023-11-29 07:32:01,170: Step: 222000, Gradient Time: 0.0038, Summary Time: 0.2753, Step Time: 0.0061
+2023-11-29 07:32:01,170: Losses: rec=30.2008, ent=2.2785, nonneg=0.0005, weight=102.4612, total=30.3149, 
+2023-11-29 07:32:01,170: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:32:06,836: Step: 223000, Gradient Time: 0.0039, Summary Time: 0.2703, Step Time: 0.0054
+2023-11-29 07:32:06,836: Losses: rec=30.3104, ent=2.1567, nonneg=0.0003, weight=102.4365, total=30.4237, 
+2023-11-29 07:32:06,837: Metrics: num used latents=10.000, discrete_mig=0.240, discrete_mil=0.930, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:32:12,338: Step: 224000, Gradient Time: 0.0037, Summary Time: 0.2470, Step Time: 0.0052
+2023-11-29 07:32:12,338: Losses: rec=30.6606, ent=2.2228, nonneg=0.0007, weight=102.5092, total=30.7746, 
+2023-11-29 07:32:12,338: Metrics: num used latents=10.000, discrete_mig=0.241, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:17,502: Epoch: 072
+2023-11-29 07:32:18,467: Step: 225000, Gradient Time: 0.0036, Summary Time: 0.3167, Step Time: 0.0058
+2023-11-29 07:32:18,468: Losses: rec=30.2132, ent=2.2009, nonneg=0.0000, weight=102.4123, total=30.3266, 
+2023-11-29 07:32:18,468: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.330, 
+2023-11-29 07:32:23,703: Step: 226000, Gradient Time: 0.0035, Summary Time: 0.2536, Step Time: 0.0050
+2023-11-29 07:32:23,704: Losses: rec=30.2373, ent=2.1793, nonneg=0.0004, weight=102.4521, total=30.3508, 
+2023-11-29 07:32:23,704: Metrics: num used latents=10.000, discrete_mig=0.243, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:29,065: Step: 227000, Gradient Time: 0.0036, Summary Time: 0.2565, Step Time: 0.0051
+2023-11-29 07:32:29,065: Losses: rec=30.8497, ent=2.1274, nonneg=0.0001, weight=102.3264, total=30.9628, 
+2023-11-29 07:32:29,065: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:34,519: Step: 228000, Gradient Time: 0.0037, Summary Time: 0.2481, Step Time: 0.0052
+2023-11-29 07:32:34,520: Losses: rec=30.8379, ent=2.1258, nonneg=0.0003, weight=102.3288, total=30.9510, 
+2023-11-29 07:32:34,520: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:35,145: Epoch: 073
+2023-11-29 07:32:40,559: Step: 229000, Gradient Time: 0.0036, Summary Time: 0.2545, Step Time: 0.0058
+2023-11-29 07:32:40,559: Losses: rec=30.6452, ent=2.0650, nonneg=0.0001, weight=102.4453, total=30.7580, 
+2023-11-29 07:32:40,559: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.928, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:45,932: Step: 230000, Gradient Time: 0.0036, Summary Time: 0.2509, Step Time: 0.0051
+2023-11-29 07:32:45,932: Losses: rec=30.5548, ent=2.1346, nonneg=0.0003, weight=102.3518, total=30.6680, 
+2023-11-29 07:32:45,932: Metrics: num used latents=10.000, discrete_mig=0.242, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:51,348: Step: 231000, Gradient Time: 0.0036, Summary Time: 0.2542, Step Time: 0.0051
+2023-11-29 07:32:51,348: Losses: rec=30.0913, ent=2.3277, nonneg=0.0006, weight=102.2662, total=30.2056, 
+2023-11-29 07:32:51,348: Metrics: num used latents=10.000, discrete_mig=0.244, discrete_mil=0.929, discrete_mod=1.000, SAP_score=0.331, 
+2023-11-29 07:32:52,602: Epoch: 074
