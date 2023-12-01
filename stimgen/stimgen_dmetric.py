@@ -50,7 +50,7 @@ def generate_ngrams(unigrams, n=1):
         print(f'n must be 1, 2 or 3')
         return []
 
-    if n == 2:
+    if n >= 2:
         unigrams = ["a", "k", "l", "m",  "v"]
         # unigrams = ["a", "d", "h", "i", "m", "n", "t"] # awraval
 
@@ -78,11 +78,11 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     #define words, sizes, fonts
     wordlist = generate_ngrams(words, ngrams)
     sizes = np.arange(15, 31, 3)
-    fonts = ['arial', 'times', 'comic']
+    fonts = ['arial', 'times']#, 'comic']
     xshifts = np.arange(-8, 8, 1)
     yshifts = np.arange(-8, 8, 1)
     colours = [0]
-    uppers   = [0, 1]
+    uppers  = [1]#[0, 1]
 
     gc.collect()
 
@@ -123,5 +123,5 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
              latents_names=latents_names, latents_size=latents_size, latents_values_str=latents_values_str)
 
 
-ngrams = 2
+ngrams = 3
 CreateWordSet(f'data/dwords/', ngrams)

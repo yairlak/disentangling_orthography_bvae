@@ -86,4 +86,6 @@ class EncoderBurgess(nn.Module):
         mu_logvar = self.mu_logvar_gen(x)
         mu, logvar = mu_logvar.view(-1, self.latent_dim, 2).unbind(-1)
 
+        if self.whittington:
+            mu = torch.relu(mu)
         return mu, logvar

@@ -12,7 +12,7 @@ from .decoders import get_decoder
 MODELS = ["Burgess"]
 
 
-def init_specific_model(model_type, img_size, latent_dim):
+def init_specific_model(model_type, img_size, latent_dim, whittington):
     """Return an instance of a VAE with encoder and decoder from `model_type`."""
     model_type = model_type.lower().capitalize()
     if model_type not in MODELS:
@@ -20,6 +20,7 @@ def init_specific_model(model_type, img_size, latent_dim):
         raise ValueError(err.format(model_type, MODELS))
 
     encoder = get_encoder(model_type)
+    encoder.whittington = whittington
     decoder = get_decoder(model_type)
     model = VAE(img_size, encoder, decoder, latent_dim)
     model.model_type = model_type  # store to help reloading

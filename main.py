@@ -90,6 +90,9 @@ def parse_arguments(args_to_parse):
     model.add_argument('-a', '--reg-anneal', type=float,
                        default=default_config['reg_anneal'],
                        help="Number of annealing steps where gradually adding the regularisation. What is annealed is specific to each loss.")
+    model.add_argument('-w', '--whittington', default="0",
+                       choices=["1", "0"],
+                       help="Apply Whittington (2022) modification for nonnegativity mean of the posterior via ReLU")
 
     # Loss Specific Options
     betaH = parser.add_argument_group('BetaH specific parameters')
@@ -205,7 +208,7 @@ def main(args):
 
         # PREPARES MODEL
         args.img_size = get_img_size(args.dataset)  # stores for metadata
-        model = init_specific_model(args.model_type, args.img_size, args.latent_dim)
+        model = init_specific_model(args.model_type, args.img_size, args.latent_dim, args.whittington)
         logger.info('Num parameters in model: {}'.format(get_n_param(model)))
 
         # TRAINS
@@ -231,7 +234,7 @@ def main(args):
         save_model(trainer.model, exp_dir, metadata=vars(args))
 
     if args.is_metrics or not args.no_test:
-        model = load_model(exp_dir, is_gpu=not args.no_cuda)
+        model = load_model(exp_dir, is_gpu=not args.no_cuda, whittington=args.whittington)
         metadata = load_metadata(exp_dir)
         # TO-DO: currently uses train datatset
         test_loader = get_dataloaders(metadata["dataset"],

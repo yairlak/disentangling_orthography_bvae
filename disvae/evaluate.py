@@ -138,8 +138,8 @@ class Evaluator:
         H_z = self._estimate_latent_entropies(samples_zCx, params_zCx)
 
         # conditional entropy H(z|v)
-        print(lat_sizes, latent_dim)
-        print(samples_zCx)
+        # print(lat_sizes, latent_dim)
+        # print(samples_zCx)
         samples_zCx = samples_zCx.view(*lat_sizes, latent_dim)
         params_zCx = tuple(p.view(*lat_sizes, latent_dim) for p in params_zCx)
         H_zCv = self._estimate_H_zCv(samples_zCx, params_zCx, lat_sizes, lat_names)
@@ -154,11 +154,50 @@ class Evaluator:
         metric_helpers = {'marginal_entropies': H_z, 'cond_entropies': H_zCv}
         mig = self._mutual_information_gap(sorted_mut_info, lat_sizes, storer=metric_helpers)
         aam = self._axis_aligned_metric(sorted_mut_info, storer=metric_helpers)
+        mir = self._mutual_information_ratio(mut_info.clamp(min=0), samples_zCx, storer=metric_helpers)
 
-        metrics = {'MIG': mig.item(), 'AAM': aam.item()}
+        metrics = {'MIG': mig.item(), 'MIR': mir.item(), 'AAM': aam.item()}
         torch.save(metric_helpers, os.path.join(self.save_dir, METRIC_HELPERS_FILE))
 
         return metrics
+
+    def _mutual_information_ratio(self, mut_info, samples_zCx, storer=None):
+        """Compute the mutual information ratio as in [1].
+
+        References
+        ----------
+           [1] Whittington, J. C., Dorrell, W., Ganguli, S., & Behrens, T. (2022, September).
+           Disentanglement with biological constraints: A theory of functional cell types.
+           In The Eleventh International Conference on Learning Representations.
+
+        """
+        # It is important to remove "inactive neuros". What's inactive?
+        # 1) neurons with no variance in evaluation
+        #   calculate neuron variance across factors
+        #   keep only active neurons (var!=0)
+        var = samples_zCx.view(np.prod(list(samples_zCx.shape[:-1])), samples_zCx.shape[-1])
+        var = torch.var(var, 0)
+        active_ind_1 = [i for i, v in enumerate(var) if v != 0]
+
+        # 2) Neurons with sum(mut_info)>0
+        neuron_mut_info = torch.sum(mut_info, 0)
+        active_ind_2 = [i for i, v in enumerate(neuron_mut_info) if v != 0]
+
+        active_ind = [x for x in active_ind_1 if x in active_ind_2]
+
+        mut_info = mut_info[:, active_ind]
+
+        mir = torch.tensor(0) # default
+        if len(active_ind)>0:
+            r_n = torch.max(mut_info, 0)[0] / torch.sum(mut_info, 0)
+            n_f, n_n = mut_info.shape
+            norm = 1 / n_f
+            mir = ((torch.sum(r_n) / n_n) - norm) / (1-norm)
+
+        if storer is not None:
+            storer["mir"] = mir
+        return mir
+
 
     def _mutual_information_gap(self, sorted_mut_info, lat_sizes, storer=None):
         """Compute the mutual information gap as in [1].
