@@ -52,19 +52,39 @@ def generate_ngrams(unigrams, n=1):
 
     if n >= 2:
         unigrams = ["a", "k", "l", "m",  "v"]
+        unigrams = ["n", "m", "v"]
         # unigrams = ["a", "d", "h", "i", "m", "n", "t"] # awraval
 
-    res = []
     if n >= 1:
-        res += unigrams
+        res = unigrams
     if n >= 2:
         t = product(unigrams, repeat=2)
-        res += ["".join(x) for x in t]
+        bigrams = ["".join(x) for x in t]
+        f = int(len(bigrams)/len(unigrams))
+        bigrams += unigrams*f
+        res = bigrams
     if n == 3:
         t = product(unigrams, repeat=3)
-        res += ["".join(x) for x in t]
+        trigrams = ["".join(x) for x in t]
+        f = int(len(trigrams) / len(bigrams))
+        trigrams += bigrams * f
+        res = trigrams
+    
+    classes = generate_clases_ngrams(res, unigrams)
+    return res, classes
 
-    return res
+
+def generate_clases_ngrams(res, unigrams):
+    max_n = max([len(x) for x in res])
+    keys = ["letter"+str(i) for i in range(max_n)]
+    dict(keys)
+    classes = np.zeros((len(res),max_n))
+    for i_w, w in enumerate(res):
+        for i_l, l in enumerate(w):
+            letter_code = unigrams.index(l)+1
+            classes[i_w,i_l] = letter_code
+
+    return classes
 
 
 def add_class(x):
@@ -76,7 +96,7 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                   n_train  = 100_000):
 
     #define words, sizes, fonts
-    wordlist = generate_ngrams(words, ngrams)
+    wordlist, classes = generate_ngrams(words, ngrams)
     sizes = np.arange(15, 31, 3)
     fonts = ['arial', 'times']#, 'comic']
     xshifts = np.arange(-8, 8, 1)
