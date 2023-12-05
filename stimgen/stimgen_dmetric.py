@@ -71,18 +71,18 @@ def generate_ngrams(unigrams, n=1):
         res = trigrams
     
     classes = generate_clases_ngrams(res, unigrams)
-    return res, classes
+    return res, classes, unigrams
 
 
 def generate_clases_ngrams(res, unigrams):
     max_n = max([len(x) for x in res])
     keys = ["letter"+str(i) for i in range(max_n)]
-    dict(keys)
-    classes = np.zeros((len(res),max_n))
+    classes = {k:np.zeros(len(res)) for k in keys}
     for i_w, w in enumerate(res):
         for i_l, l in enumerate(w):
+            k = "letter"+str(i_l)
             letter_code = unigrams.index(l)+1
-            classes[i_w,i_l] = letter_code
+            classes[k][i_w] = letter_code
 
     return classes
 
@@ -96,8 +96,9 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                   n_train  = 100_000):
 
     #define words, sizes, fonts
-    wordlist, classes = generate_ngrams(words, ngrams)
-    sizes = np.arange(15, 31, 3)
+    wordlist, classes, unigrams = generate_ngrams(words, ngrams)
+    unigrams = [""]+unigrams
+    sizes = np.arange(30, 31, 3)
     fonts = ['arial', 'times']#, 'comic']
     xshifts = np.arange(-8, 8, 1)
     yshifts = np.arange(-8, 8, 1)
@@ -108,9 +109,11 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
     imgs, latents_classes,latents_values, latents_values_str = [], [], [], []
     latents_names = ["words", "colours", "sizes",
-                     "xshifts", "yshifts", "fonts", "uppers"]
+                     "xshifts", "yshifts", "fonts", 
+                     "uppers"] + list(classes.keys()) 
     latents_size  = [len(wordlist), len(colours), len(sizes),
-                     len(xshifts), len(yshifts), len(fonts), len(uppers)]
+                     len(xshifts), len(yshifts), len(fonts), 
+                     len(uppers)] + [len(x) for x in classes.values()]
 
     all_stim = product(add_class(colours), add_class(sizes),
                   add_class(xshifts), add_class(yshifts),
@@ -118,6 +121,7 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     all_stim = list(all_stim)
 
     for w, word in enumerate(wordlist):
+        letter_code = [int(x[w]) for x in classes.values()] 
         # n_thisWord = n_total//len(wordlist)
         # selected   = random.sample(all, n_thisWord) # select some variations for this word
         # print(f'Generating {n_thisWord} images for word: {word}')
@@ -132,9 +136,10 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                            xshift=xshift, yshift=yshift, upper=upper)
 
                 imgs.append(np.array(img))
-                latents_classes.append([w, c, s, x, y, f, u])
-                latents_values.append([w, col, size, xshift, yshift, f, upper])
-                latents_values_str.append([word, col, size, xshift, yshift, font, upper])
+                latents_classes.append([w, c, s, x, y, f, u] + letter_code)
+                latents_values.append([w, col, size, xshift, yshift, f, upper]+ letter_code)
+                latents_values_str.append([word, col, size, xshift, yshift, font, upper] + 
+                                          [unigrams[l] for l in letter_code])
 
     os.makedirs(path_out, exist_ok=True)
     f_name = f'/dletters_n{ngrams}'
