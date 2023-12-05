@@ -41,7 +41,18 @@ def gen2(savepath=None, text = 'text', index=1, mirror=False,
     fnt = ImageFont.truetype(fontname+'.ttf', size)
     draw = ImageDraw.Draw(img)
     w, h = fnt.getsize(text)
-    draw.text((xshift + (W-w)/2, yshift + (H-h)/2), text, font=fnt, fill='white')
+    h_anchor = (W - w) / 2
+    v_anchor = (H - h) / 2
+
+    if w>W:
+        raise ValueError(f"Text width is bigger than image. Remove size {size} from parameters")
+    elif h_anchor < abs(xshift):
+        raise ValueError(f"Not enough space to move the image horizontally. Remove xshift {xshift} from parameters")
+    elif v_anchor < abs(xshift):
+        raise ValueError(f"Not enough space to move the image vertically. Remove yshift {yshift} from parameters")
+
+    xy = (xshift + h_anchor, yshift + v_anchor)
+    draw.text(xy, text, font=fnt, fill='white')
     return img
 
 
@@ -98,10 +109,10 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     #define words, sizes, fonts
     wordlist, classes, unigrams = generate_ngrams(words, ngrams)
     unigrams = [""]+unigrams
-    sizes = np.arange(30, 31, 3)
+    sizes = np.arange(12, 21, 3)
     fonts = ['arial', 'times']#, 'comic']
-    xshifts = np.arange(-8, 8, 1)
-    yshifts = np.arange(-8, 8, 1)
+    xshifts = np.arange(-5, 5, 1)
+    yshifts = np.arange(-5, 5, 1)
     colours = [0]
     uppers  = [1]#[0, 1]
 
