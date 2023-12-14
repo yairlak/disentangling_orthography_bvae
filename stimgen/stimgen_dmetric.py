@@ -51,11 +51,12 @@ def generate_ngrams(unigrams, n=1):
         return []
 
     if n >= 2:
-        unigrams = ["a", "k", "l", "m",  "v"]
+        # unigrams = ["a", "k", "l", "m",  "v"]
         # unigrams = ["a", "d", "h", "i", "m", "n", "t"] # awraval
+	unigrams = ["k","x"]
 
     res = []
-    if n >= 1:
+    if n == 1:
         res += unigrams
     if n >= 2:
         t = product(unigrams, repeat=2)
@@ -77,20 +78,23 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
     #define words, sizes, fonts
     wordlist = generate_ngrams(words, ngrams)
-    sizes = np.arange(15, 31, 3)
-    fonts = ['arial', 'times']#, 'comic']
+    #sizes = np.arange(15, 31, 3)
+    sizes = np.arange(20, 21, 3)
+    fonts = ['arial']#, 'times']#, 'comic']
     xshifts = np.arange(-8, 8, 1)
     yshifts = np.arange(-8, 8, 1)
     colours = [0]
-    uppers  = [1]#[0, 1]
+    uppers  = [0, 1]
 
     gc.collect()
 
     imgs, latents_classes,latents_values, latents_values_str = [], [], [], []
     latents_names = ["words", "colours", "sizes",
                      "xshifts", "yshifts", "fonts", "uppers"]
+    latents_names = ["words", "xshifts", "yshifts", "uppers"]
     latents_size  = [len(wordlist), len(colours), len(sizes),
                      len(xshifts), len(yshifts), len(fonts), len(uppers)]
+    latents_size  = [len(wordlist), len(xshifts), len(yshifts), len(uppers)]
 
     all_stim = product(add_class(colours), add_class(sizes),
                   add_class(xshifts), add_class(yshifts),
@@ -112,9 +116,13 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                            xshift=xshift, yshift=yshift, upper=upper)
 
                 imgs.append(np.array(img))
-                latents_classes.append([w, c, s, x, y, f, u])
-                latents_values.append([w, col, size, xshift, yshift, f, upper])
-                latents_values_str.append([word, col, size, xshift, yshift, font, upper])
+                #latents_classes.append([w, c, s, x, y, f, u])
+                #latents_values.append([w, col, size, xshift, yshift, f, upper])
+                #latents_values_str.append([word, col, size, xshift, yshift, font, upper])
+                
+                latents_classes.append([w, x, y,  u])
+                latents_values.append([w, xshift, yshift, upper])
+                latents_values_str.append([word, xshift, yshift, upper])
 
     os.makedirs(path_out, exist_ok=True)
     f_name = f'/dletters_n{ngrams}'
@@ -123,5 +131,5 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
              latents_names=latents_names, latents_size=latents_size, latents_values_str=latents_values_str)
 
 
-ngrams = 3
+ngrams = 2
 CreateWordSet(f'data/dwords/', ngrams)
