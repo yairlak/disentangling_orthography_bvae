@@ -61,6 +61,10 @@ def parse_arguments(args_to_parse):
                           help='Save a checkpoint of the trained model every n epoch.')
     training.add_argument('-d', '--dataset', help="Path to training data.",
                           default=default_config['dataset'], choices=DATASETS)
+    training.add_argument('-f', '--filename', help="Name of dataset file.",
+                          default="dletters.npz")
+    training.add_argument('-p', '--path', help="path to dataset file.",
+                          default="data/dwords/")
     training.add_argument('-x', '--experiment',
                           default=default_config['experiment'], choices=EXPERIMENTS,
                           help='Predefined experiments to run. If not `custom` this will overwrite some other arguments.')
@@ -203,7 +207,9 @@ def main(args):
         # PREPARES DATA
         train_loader = get_dataloaders(args.dataset,
                                        batch_size=args.batch_size,
-                                       logger=logger)
+                                       logger=logger,
+                                       root=args.path,
+                                       file_name=args.filename)
         logger.info("Train {} with {} samples".format(args.dataset, len(train_loader.dataset)))
 
         # PREPARES MODEL
