@@ -20,10 +20,14 @@ if regen:
     generate_activations()
 
 # Generate distance matrices
-dist_model_unigram_lower, unigram_lower = plot_simmat_and_dendro(origin="model", n_letters=1, case="lower")
-dist_model_unigram_upper, unigram_upper = plot_simmat_and_dendro(origin="model", n_letters=1, case="upper")
-dist_model_bigram_lower, bigram_lower = plot_simmat_and_dendro(origin="model", n_letters=2, case="lower")
-dist_model_bigram_upper, bigram_upper = plot_simmat_and_dendro(origin="model", n_letters=2, case="upper")
+dist_model_unigram_lower, unigram_lower = plot_simmat_and_dendro(origin="model", 
+                                                                 n_letters=1, case="lower")
+dist_model_unigram_upper, unigram_upper = plot_simmat_and_dendro(origin="model", 
+                                                                 n_letters=1, case="upper")
+dist_model_bigram_lower, bigram_lower   = plot_simmat_and_dendro(origin="model", 
+                                                                 n_letters=2, case="lower")
+dist_model_bigram_upper, bigram_upper   = plot_simmat_and_dendro(origin="model", 
+                                                                 n_letters=2, case="upper")
 
 print(unigram_lower)
 

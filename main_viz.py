@@ -83,7 +83,8 @@ def main(args):
 
     if "all" in args.plots:
         args.plots = [p for p in PLOT_TYPES if p != "all"]
-
+	
+    print(args.plots)	
     for plot_type in args.plots:
         if plot_type == 'generate-samples':
             viz.generate_samples(size=size)

@@ -50,7 +50,7 @@ def get_background(dataset):
     return get_dataset(dataset).background_color
 
 
-def get_dataloaders(dataset, root=None, shuffle=True, pin_memory=True,
+def get_dataloaders(dataset, root=None, file_name=None, shuffle=True, pin_memory=True,
                     batch_size=128, logger=logging.getLogger(__name__), **kwargs):
     """A generic data loader
 
@@ -67,7 +67,8 @@ def get_dataloaders(dataset, root=None, shuffle=True, pin_memory=True,
     """
     pin_memory = pin_memory and torch.cuda.is_available  # only pin if GPU available
     Dataset = get_dataset(dataset)
-    dataset = Dataset(logger=logger) if root is None else Dataset(root=root, logger=logger)
+    dataset = Dataset(logger=logger) if (root is None) or (file_name is None) else (
+                    Dataset(root=root, file_name=file_name, logger=logger))
     return DataLoader(dataset,
                       batch_size=batch_size,
                       shuffle=shuffle,
@@ -87,9 +88,11 @@ class DisentangledDataset(Dataset, abc.ABC):
         List of `torch.vision.transforms` to apply to the data when loading it.
     """
 
-    def __init__(self, root, transforms_list=[], logger=logging.getLogger(__name__)):
+    def __init__(self, root, transforms_list=[],
+                 logger=logging.getLogger(__name__)):#, filename=None):
         self.root = root
-        self.train_data = os.path.join(root, type(self).files["train"])
+        filename = type(self).files["train"] # if filename is None else filename
+        self.train_data = os.path.join(root, filename)
         self.transforms = transforms.Compose(transforms_list)
         self.logger = logger
 
@@ -424,9 +427,12 @@ class Dletters(DisentangledDataset):
                           lat_values['upper'].size])
     #print('lat_sizes dLetters', lat_sizes)                 
 
-    def __init__(self, root=os.path.join(DIR, '../data/dwords/'), **kwargs):
+    def __init__(self, root=os.path.join(DIR, '../data/dwords/'),
+                 file_name="dletters.npz", **kwargs):
+
         super().__init__(root, [transforms.ToTensor()], **kwargs)
 
+        self.train_data = os.path.join(root, file_name)
         dataset_zip = np.load(self.train_data)
         self.imgs = dataset_zip['imgs']
         self.lat_values = dataset_zip['latents_values']
