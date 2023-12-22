@@ -68,6 +68,10 @@ def parse_arguments(args_to_parse):
     parser.add_argument('--no-test', action='store_true',
                             default=default_config['no_test'],
                             help="Whether not to compute the test losses.`")
+    parser.add_argument('-f', '--filename', help="Name of dataset file.",
+                          default="dletters.npz")
+    parser.add_argument('-p', '--path', help="path to dataset file.",
+                          default="data/dwords/")
 
     args = parser.parse_args()
 
@@ -106,7 +110,9 @@ def main(args):
     test_loader = get_dataloaders(meta_data["dataset"],
                                   batch_size=args.eval_batchsize,
                                   shuffle=False,
-                                  logger=logger)
+                                  logger=logger,
+                                  root=args.path,
+                                  file_name=args.filename)
  
     loss_f = get_loss_f(args.loss,
                             n_data=len(test_loader.dataset),
