@@ -40,38 +40,24 @@ for A in $ANALYSES; do
 
         # Train Model
         cp $f/'train.npz' data/dwords/dletters.npz
-        cmd='python main.py '$loss'_'$dataset'_'$name \
-             ' -p '$f \
-             ' -f train.npz' \
-             ' --epochs '$EPOCHS\
-             ' --dataset '$dataset\
-             ' --eval-batchsize '$BATCH_SIZE\
-             ' --betaH-B '$BETA\
-             ' --batch-size '$BATCH_SIZE\
-             ' --latent-dim '$LATENT_SIZE\
-             ' --lr '$LEARNING_RATE\
-             ' --experiment custom --no-progress-bar --rewrite 1'
+        cmd='python main.py '$loss'_'$dataset'_'$name' -p '$f' -f train.npz --epochs '$EPOCHS' --dataset '$dataset' --eval-batchsize '$BATCH_SIZE' --betaH-B '$BETA' --batch-size '$BATCH_SIZE' --latent-dim '$LATENT_SIZE' --lr '$LEARNING_RATE' --experiment custom --no-progress-bar --rewrite 1'
         echo $cmd
-        eval $cmd
+        #eval $cmd
 		
         # Eval model
         cp $f/'test.npz' data/dwords/dletters.npz
-        cmd='python main_eval.py '$loss'_'$dataset'_'$name\
-             ' -p '$f \
-             ' -f test.npz' 
+        cmd='python main_eval.py '$loss'_'$dataset'_'$name' -p '$f' -f test.npz' 
         echo $cmd
-        eval $cmd
+        #eval $cmd
 
         # Plot model
-        cmd='python main_viz.py '$loss'_'$dataset'_'$name' reconstruct'\
-             ' -p '$f \
-             ' -f test.npz' 
+        cmd='python main_viz.py '$loss'_'$dataset'_'$name' reconstruct -p '$f' -f test.npz' 
         echo $cmd
-        eval $cmd
+        #eval $cmd
 
         # move result to the correct folder
-        mkdir -p results/$f
-        mv results/betaB_dletters_$name results/$f/
+        #mkdir -p results/$f
+        #mv results/betaB_dletters_$name results/$f/
 
     done
 done
