@@ -3,7 +3,9 @@ import numpy as np
 from disvae.utils.modelIO import load_model, load_metadata
 from utils.datasets import get_dataloaders
 
-def generate_activations(model_name = "selected_models/bigram_w_unigram/betaB_dletters_beta_8_latent_size_16_batch_size_64_learning_rate_0.0001"):
+
+def generate_activations(ngram_order=1,
+                         model_name="selected_models/bigram_w_unigram/betaB_dletters_beta_8_latent_size_16_batch_size_64_learning_rate_0.0001"):
     '''
     Generate npy with all the activations from a given model
 
@@ -37,7 +39,8 @@ def generate_activations(model_name = "selected_models/bigram_w_unigram/betaB_dl
     u = list(lat_names).index("uppers")
     f = list(lat_names).index("fonts")
 
-    letters = np.zeros((lat_sizes[w], lat_sizes[u], 2, latent_dim)) # (#words, lowwer/upper, unigram/bigram, activation)
+
+    letters = np.zeros((lat_sizes[w], lat_sizes[u], ngram_order, latent_dim)) # (#words, lowwer/upper, unigram/bigram, activation)
     count = letters.copy()
     words = [0]*lat_sizes[w]
     for i, (data, _) in enumerate(test_loader):
@@ -54,7 +57,7 @@ def generate_activations(model_name = "selected_models/bigram_w_unigram/betaB_dl
             letters[index] += latent_activation.to("cpu").tolist()
             count[index] += 1
 
-    letters = letters/count # This raise a warning bc there are zeros. Not a problem.
+    letters = letters/count
 
 
     np.savez("analysis/clustrering.py/model_activations", activations=letters, words=words)

@@ -149,7 +149,11 @@ class Evaluator:
 
         # I[z_j;v_k] = E[log \sum_x q(z_j|x)p(x|v_k)] + H[z_j] = - H[z_j|v_k] + H[z_j]
         mut_info = - H_zCv + H_z
+
         sorted_mut_info = torch.sort(mut_info, dim=1, descending=True)[0].clamp(min=0)
+
+        # Extract information about normalize MI for each unit
+        norm_MI = torch.div(sorted_mut_info, sorted_mut_info.sum(0))
 
         metric_helpers = {'marginal_entropies': H_z, 'cond_entropies': H_zCv}
         mig = self._mutual_information_gap(sorted_mut_info, lat_sizes, storer=metric_helpers)
@@ -158,6 +162,7 @@ class Evaluator:
 
         metrics = {'MIG': mig.item(), 'MIR': mir.item(), 'AAM': aam.item()}
         torch.save(metric_helpers, os.path.join(self.save_dir, METRIC_HELPERS_FILE))
+        torch.save(norm_MI, os.path.join(self.save_dir, "norm_MI.pth"))
 
         return metrics
 
@@ -187,7 +192,7 @@ class Evaluator:
 
         mut_info = mut_info[:, active_ind]
 
-        mir = torch.tensor(0) # default
+        mir = torch.tensor(0) # default in case  there is no active neuron
         if len(active_ind)>0:
             r_n = torch.max(mut_info, 0)[0] / torch.sum(mut_info, 0)
             n_f, n_n = mut_info.shape

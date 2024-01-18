@@ -118,13 +118,13 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
     gc.collect()
 
-    imgs, latents_classes,latents_values, latents_values_str = [], [], [], []
-    latents_names = ["words", "colours", "sizes",
+    imgs, all_words, latents_classes,latents_values, latents_values_str = [], [], [], [], []
+    latents_names = ["colours", "sizes",
                      "xshifts", "yshifts", "fonts", 
                      "uppers"] + list(classes.keys()) 
-    latents_size  = [len(wordlist), len(colours), len(sizes),
+    latents_size  = [len(colours), len(sizes),
                      len(xshifts), len(yshifts), len(fonts), 
-                     len(uppers)] + [len(x) for x in classes.values()]
+                     len(uppers)] + [len(set(x)) for x in classes.values()]
 
     all_stim = product(add_class(colours), add_class(sizes),
                   add_class(xshifts), add_class(yshifts),
@@ -147,15 +147,20 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                            xshift=xshift, yshift=yshift, upper=upper)
 
                 imgs.append(np.array(img))
-                latents_classes.append([w, c, s, x, y, f, u] + letter_code)
-                latents_values.append([w, col, size, xshift, yshift, f, upper]+ letter_code)
-                latents_values_str.append([word, col, size, xshift, yshift, font, upper] + 
+                #latents_classes.append([w, c, s, x, y, f, u] + letter_code)
+                #latents_values.append([w, col, size, xshift, yshift, f, upper]+ letter_code)
+                #latents_values_str.append([word, col, size, xshift, yshift, font, upper] +
+                #                          [unigrams[l] for l in letter_code])
+                all_words.append(w)
+                latents_classes.append([c, s, x, y, f, u] + letter_code)
+                latents_values.append([col, size, xshift, yshift, f, upper]+ letter_code)
+                latents_values_str.append([word, col, size, xshift, yshift, font, upper] +
                                           [unigrams[l] for l in letter_code])
 
     os.makedirs(path_out, exist_ok=True)
     f_name = f'/dletters_n{ngrams}'
     np.savez(path_out + f_name,
-             imgs=imgs, latents_classes=latents_classes, latents_values=latents_values,
+             imgs=imgs, latents_classes=latents_classes, words=all_words, latents_values=latents_values,
              latents_names=latents_names, latents_size=latents_size, latents_values_str=latents_values_str)
 
 
