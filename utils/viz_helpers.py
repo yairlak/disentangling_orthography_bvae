@@ -13,7 +13,7 @@ from utils.helpers import set_seed
 FPS_GIF = 12
 
 
-def get_samples(dataset, num_samples, idcs=[]):
+def get_samples(dataset, num_samples, idcs=[], root=None, file_name=None):
     """ Generate a number of samples from the dataset.
 
     Parameters
@@ -29,6 +29,8 @@ def get_samples(dataset, num_samples, idcs=[]):
     """
     data_loader = get_dataloaders(dataset,
                                   batch_size=1,
+                                  root=root,
+                                  file_name=file_name,
                                   shuffle=idcs is None)
 
     idcs += random.sample(range(len(data_loader.dataset)), num_samples - len(idcs))

@@ -37,6 +37,7 @@ for dirname in dirnames:
     ax.plot(df_log['Epoch'], df_log['Value'], lw=3)
     ax.set_xlabel('Epoch', fontsize=20)
     ax.set_ylabel('Reconstruction Loss', fontsize=20)
+    ax.set_ylim(top=1000)
     fn_fig = os.path.join(path2logs, model_name, 'train_lossess.png')
     fig.savefig(fn_fig)
     plt.close(fig)

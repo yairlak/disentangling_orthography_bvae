@@ -50,6 +50,10 @@ def parse_arguments(args_to_parse):
                         help='Displays the loss on the figures (if applicable).')
     parser.add_argument('--is-posterior', action='store_true',
                         help='Traverses the posterior instead of the prior.')
+    parser.add_argument('-f', '--filename', help="Name of dataset file.",
+                          default="dletters.npz")
+    parser.add_argument('-p', '--path', help="path to dataset file.",
+                          default="data/dwords/")
     args = parser.parse_args()
 
     return args
@@ -79,11 +83,13 @@ def main(args):
     size = (args.n_rows, args.n_cols)
     # same samples for all plots: sample max then take first `x`data  for all plots
     num_samples = args.n_cols * args.n_rows
-    samples = get_samples(dataset, num_samples, idcs=args.idcs)
+    samples = get_samples(dataset, num_samples, idcs=args.idcs,
+                          root=args.path, file_name=args.filename)
 
     if "all" in args.plots:
         args.plots = [p for p in PLOT_TYPES if p != "all"]
-
+	
+    print(args.plots)	
     for plot_type in args.plots:
         if plot_type == 'generate-samples':
             viz.generate_samples(size=size)
