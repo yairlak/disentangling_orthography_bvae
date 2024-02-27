@@ -57,7 +57,7 @@ class Evaluator:
         self.is_progress_bar = is_progress_bar
         self.logger.info("Testing Device: {}".format(self.device))
 
-    def __call__(self, data_loader, is_metrics=False, is_losses=True):
+    def __call__(self, data_loader, is_metrics=False, is_losses=True, is_classification=True):
         """Compute all test losses.
 
         Parameters
@@ -90,9 +90,61 @@ class Evaluator:
         if is_still_training:
             self.model.train()
 
+        if is_classification:
+            acc = self.classify(data_loader)
+            acc = {"Accuracy_input": acc[0], "Accuracy_reconstruct": acc[1]}
+            save_metadata(acc, self.save_dir, filename="classier_acc.log")
         self.logger.info('Finished evaluating after {:.1f} min.'.format((default_timer() - start) / 60))
 
-        return metrics, losses
+        return metrics, losses, acc
+
+    def classify(self, dataloader):
+        from bruno.classifier.code.model_CNN import CNNmodel64, eval_model
+        from bruno.classifier.code.visualization_CNN import plot_loss, plot_samples
+        import torchvision
+        from random import randint
+        from torch.utils.data import TensorDataset
+
+        CNN_model = CNNmodel64(62).to(self.device)
+        CNN_model.load_state_dict(torch.load("bruno/classifier/output/cifar_net.pth"))
+        CNN_model.eval()
+
+        acc_orig = 0
+        acc_recon = 0
+        n_total = 0
+        with torch.no_grad():
+            for data, labels in tqdm(dataloader, leave=False, disable=not self.is_progress_bar):
+                # s = [randint(0,len(data)) for _ in range(50)]
+                # plot_samples(torchvision.utils.make_grid(data[s,:,:,:]),
+                #              'testimg/test_samples.png')
+
+                data = data.to(self.device)
+
+                # Run the VAE model on the test images
+                recon_batch, _, _ = self.model(data)
+                # plot_samples(torchvision.utils.make_grid(recon_batch.cpu().detach()[s,:,:,:]),
+                #              'testimg/test_recon.png')
+
+                # Run the CNN model on the original and the rescontructed images
+                ## labels -> real labels
+                ## data   -> orignal
+                outputs = CNN_model(data)
+                _, predicted = torch.max(outputs, 1)
+                acc_orig += (labels[:, 0] == predicted.cpu()).sum().item()
+                # print()
+                # print(labels[s,0])
+                # print(predicted[s])
+
+                ## recon_batch -> reconstructed
+                outputs = CNN_model(recon_batch)
+                _, predicted = torch.max(outputs, 1)
+                acc_recon += (labels[:, 0] == predicted.cpu()).sum().item()
+                n_total += len(data)
+        pass
+        acc_orig = acc_orig / n_total
+        acc_recon = acc_recon / n_total
+
+        return acc_orig, acc_recon
 
     def compute_losses(self, dataloader):
         """Compute all test losses.
