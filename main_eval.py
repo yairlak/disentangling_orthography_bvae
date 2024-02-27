@@ -125,10 +125,10 @@ def main(args):
                           save_dir=exp_dir,
                           is_progress_bar=not args.no_progress_bar)
 
-    metric, losses = evaluator(test_loader, is_metrics=args.is_metrics, is_losses=not args.no_test)
+    metric, losses, acc = evaluator(test_loader, is_metrics=args.is_metrics, is_losses=not args.no_test)
     fn = os.path.join(model_dir, 'eval.pkl')
     with open(fn, 'wb') as f:
-        pickle.dump([metric, losses], f)
+        pickle.dump([metric, losses, acc], f)
 
 if __name__ == '__main__':
     args = parse_arguments(sys.argv[1:])
