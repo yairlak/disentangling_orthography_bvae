@@ -37,7 +37,7 @@ def gen2(savepath=None, text = 'text', index=1, mirror=False,
         text = text.upper()
     if invert:
         text = text[::-1]
-    img = Image.new("L", (W,H), color = 0)
+    img = Image.new("L", (W,H), color = 10)
     fnt = ImageFont.truetype(fontname+'.ttf', size)
     draw = ImageDraw.Draw(img)
 
@@ -49,16 +49,17 @@ def gen2(savepath=None, text = 'text', index=1, mirror=False,
     v_anchor = (H - h) / 2
 
     x, y = (xshift + h_anchor, yshift + v_anchor)
-    if (x+w)>W or (x<0):
-        raise ValueError(f"Text width is bigger than image. Failed on size:{size}")
-
     for t in text:
         draw.text((x,y), t, font=fnt, fill="white")
         letter_w = fnt.getsize(t)[0] # Use the letter width to move the following
         x += letter_w + spacing
-    
+
+    if x>(W+spacing+2) or (xshift + h_anchor)<-1:
+        img.save(f"testimg/{text}_{xshift}_{yshift}_{spacing}.jpg")
+        raise ValueError(f"Text width is bigger than image. Failed on size:{size}")
+
     if len(text)==5:
-        img.save(f"test/{text}_{xshift}_{yshift}_{spacing}.jpg")
+        img.save(f"testimg/{text}_{xshift}_{yshift}_{spacing}.jpg")
     
     return img
 
@@ -118,9 +119,9 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     #define words, sizes, fonts
     wordlist, classes, unigrams = generate_ngrams(words, ngrams)
     unigrams = [""]+unigrams
-    sizes = [13]#np.arange(12, 21, 3)
+    sizes = [12]#np.arange(12, 21, 3)
     fonts = ['arial']#, 'times']#, 'comic']
-    xshifts = np.arange(-3,  4, 1)
+    xshifts = np.arange(-2,  4, 1)
     yshifts = np.arange(-4, 4, 1)
     colours = [0]
     uppers  = [1]#[0, 1]
@@ -145,7 +146,7 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
         letter_code = [int(x[w]) for x in classes.values()] 
         selected = all_stim
         print(f'Generating images for word: {word}')
-        for ((s, sp), (s, size),
+        for ((sp, space), (s, size),
              (x, xshift), (y, yshift),
              (f, font), (u, upper)) in selected:
 
@@ -155,8 +156,8 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
                 imgs.append(np.array(img))
 
-                latents_classes.append([w, s, s, x, y, f, u] + letter_code)
-                latents_values.append([w, sp, size, xshift, yshift, f, upper]+ letter_code)
+                latents_classes.append([w, sp, s, x, y, f, u] + letter_code)
+                latents_values.append([w, space, size, xshift, yshift, f, upper] + letter_code)
                 latents_values_str.append([word, sp, size, xshift, yshift, font, upper] + 
                                           [unigrams[l] for l in letter_code])
                 
@@ -164,7 +165,7 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     os.makedirs(path_out, exist_ok=True)
     f_name = f'/dletters_n{ngrams}'
     np.savez(path_out + f_name,
-             imgs=imgs, latents_classes=latents_classes, words=all_words, latents_values=latents_values,
+             imgs=imgs, latents_classes=latents_classes, words=wordlist, latents_values=latents_values,
              latents_names=latents_names, latents_size=latents_size, latents_values_str=latents_values_str)
 
 
