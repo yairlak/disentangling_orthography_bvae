@@ -106,7 +106,7 @@ class Evaluator:
         from torch.utils.data import TensorDataset
 
         CNN_model = CNNmodel64(62).to(self.device)
-        CNN_model.load_state_dict(torch.load("bruno/classifier/output/cifar_net.pth"))
+        CNN_model.load_state_dict(torch.load("classifier/output/CNN_classifier_generalizationCorpus.pth"))
         CNN_model.eval()
 
         acc_orig = 0
