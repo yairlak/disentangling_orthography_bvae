@@ -328,7 +328,7 @@ class Visualizer():
         filename = os.path.join(self.model_dir, PLOT_NAMES["reconstruct_traverse"])
         concatenated.save(filename)
 
-    def gif_traversals(self, data, n_latents=None, n_per_gif=15):
+    def gif_traversals(self, data, n_latents=None, n_per_gif=8):
         """Generates a grid of gifs of latent posterior traversals where the rows
         are the latent dimensions and the columns are random images.
 
@@ -365,7 +365,7 @@ class Visualizer():
         pad_values = (1 - get_background(self.dataset)) * 255
 
         # Plot 1 column of the gif in a figure where each column is a frame of the gif
-        img_one_sample = [[x[12] for x in all_cols]]*len(all_cols)
+        img_one_sample = [[x[1] for x in all_cols]]*len(all_cols)
         img_one_sample = [concatenate_pad(cols, pad_size=2, pad_values=pad_values, axis=1)
                           for cols in img_one_sample]
         filename = os.path.join(self.model_dir, "img_traversals.gif")

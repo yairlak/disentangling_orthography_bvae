@@ -14,6 +14,8 @@ log*
 pretrained_models
 test/
 extra/
+results_OLD/
+
 # Byte-compiled / optimized / DLL files
 *.egg-info
 *pyc

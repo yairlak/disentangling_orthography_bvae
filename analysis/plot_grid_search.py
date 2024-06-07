@@ -26,14 +26,23 @@ for dirname in dirnames:
     _, beta, _, _, latent_size, _, _, batch_size, _, _, learning_rate = s.split('_')
     fn_eval = 'eval.pkl'
     fn_log = 'train_losses.log'
+    fn_metrics = 'metrics.log'
     fn_eval = os.path.join(path2logs, model_name, fn_eval)
     fn_log = os.path.join(path2logs, model_name, fn_log)
+    fn_metrics = os.path.join(path2logs, model_name, fn_metrics)
     print(f'Loading {fn_eval}')
     
     if os.path.exists(fn_log) and os.path.exists(fn_eval):
-        metrics, losses = pickle.load(open(fn_eval, 'rb'))
+        _, losses, acc = pickle.load(open(fn_eval, 'rb'))
         df_log = pd.read_csv(fn_log)
         print(dirname)
+
+        metrics = {}
+        with open(fn_metrics) as f:
+            for line in f:
+                if ":" in line:
+                    (key, val) = line.strip().replace('"','').replace(',','').split(":")
+                    metrics[key] = float(val)
     elif not os.path.exists(fn_log):
         print(f'WARNING: log file not found - {fn_log}')
     elif not os.path.exists(fn_eval):

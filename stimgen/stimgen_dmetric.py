@@ -28,7 +28,6 @@ words = ['a', 'b', 'c', 'd', 'e',
          'u', 'v', 'w', 'x', 'y',
          'z']
 
-
 ####
 def gen2(savepath=None, text = 'text', index=1, mirror=False,
         invert=False, fontname='Arial', W = 64, H = 64, size=24,
@@ -132,10 +131,10 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     imgs, latents_classes,latents_values, latents_values_str = [], [], [], []
     latents_names = ["words", "spacing", "sizes",
                      "xshifts", "yshifts", "fonts", 
-                     "uppers"] + list(classes.keys()) 
+                     "uppers"] #+ list(classes.keys())
     latents_size  = [len(wordlist), len(spacing), len(sizes),
                      len(xshifts), len(yshifts), len(fonts), 
-                     len(uppers)] + [len(set(x)) for x in classes.values()]
+                     len(uppers)] #+ [len(set(x)) for x in classes.values()]
 
     all_stim = product(add_class(spacing), add_class(sizes),
                   add_class(xshifts), add_class(yshifts),
@@ -156,11 +155,14 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
                 imgs.append(np.array(img))
 
-                latents_classes.append([w, sp, s, x, y, f, u] + letter_code)
-                latents_values.append([w, space, size, xshift, yshift, f, upper] + letter_code)
-                latents_values_str.append([word, sp, size, xshift, yshift, font, upper] + 
-                                          [unigrams[l] for l in letter_code])
+                # latents_classes.append([w, sp, s, x, y, f, u] + letter_code)
+                # latents_values.append([w, space, size, xshift, yshift, f, upper] + letter_code)
+                # latents_values_str.append([word, sp, size, xshift, yshift, font, upper] +
+                #                           [unigrams[l] for l in letter_code])
                 
+                latents_classes.append([w, sp, s, x, y, f, u])
+                latents_values.append([w, space, size, xshift, yshift, f, upper])
+                latents_values_str.append([word, sp, size, xshift, yshift, font, upper])
 
     os.makedirs(path_out, exist_ok=True)
     f_name = f'/dletters_n{ngrams}'

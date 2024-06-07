@@ -99,8 +99,8 @@ class Evaluator:
         return metrics, losses, acc
 
     def classify(self, dataloader):
-        from bruno.classifier.code.model_CNN import CNNmodel64, eval_model
-        from bruno.classifier.code.visualization_CNN import plot_loss, plot_samples
+        from classifier.code.model_CNN import CNNmodel64, eval_model
+        from classifier.code.visualization_CNN import plot_loss, plot_samples
         import torchvision
         from random import randint
         from torch.utils.data import TensorDataset
@@ -128,7 +128,9 @@ class Evaluator:
                 # Run the CNN model on the original and the rescontructed images
                 ## labels -> real labels
                 ## data   -> orignal
-                outputs = CNN_model(data)
+                clip_threshold = .7
+                clipped_data = 1.0 * (data>clip_threshold)
+                outputs = CNN_model(clipped_data)
                 _, predicted = torch.max(outputs, 1)
                 acc_orig += (labels[:, 0] == predicted.cpu()).sum().item()
                 # print()
@@ -136,7 +138,8 @@ class Evaluator:
                 # print(predicted[s])
 
                 ## recon_batch -> reconstructed
-                outputs = CNN_model(recon_batch)
+                clipped_data = 1.0 * (recon_batch>clip_threshold)
+                outputs = CNN_model(clipped_data)
                 _, predicted = torch.max(outputs, 1)
                 acc_recon += (labels[:, 0] == predicted.cpu()).sum().item()
                 n_total += len(data)
@@ -358,6 +361,7 @@ class Evaluator:
             Tensor of shape (latent_dim) containing the marginal entropies H(z_j)
         """
         len_dataset, latent_dim = samples_zCx.shape
+        n_samples = min(n_samples, len_dataset)
         device = samples_zCx.device
         H_z = torch.zeros(latent_dim, device=device)
 

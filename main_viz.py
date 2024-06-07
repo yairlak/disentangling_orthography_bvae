@@ -88,7 +88,7 @@ def main(args):
 
     if "all" in args.plots:
         args.plots = [p for p in PLOT_TYPES if p != "all"]
-	
+
     print(args.plots)	
     for plot_type in args.plots:
         if plot_type == 'generate-samples':
@@ -109,7 +109,7 @@ def main(args):
                                      n_per_latent=args.n_cols,
                                      is_show_text=args.is_show_loss)
         elif plot_type == "gif-traversals":
-            viz.gif_traversals(samples[:args.n_cols, ...], n_latents=args.n_rows)
+            viz.gif_traversals(samples[:args.n_cols, ...], n_latents=args.n_rows,n_per_gif=7)
         else:
             raise ValueError("Unkown plot_type={}".format(plot_type))
 
