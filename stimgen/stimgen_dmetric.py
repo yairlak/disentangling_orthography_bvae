@@ -21,14 +21,6 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 # from tqdm import tqdm
 # import pickle, subprocess, shlex, shutil, io, , , time
 
-words = ['a', 'b', 'c', 'd', 'e',
-         'f', 'g', 'h', 'i', 'j',
-         'k', 'l', 'm', 'n', 'o',
-         'p', 'q', 'r', 's', 't',
-         'u', 'v', 'w', 'x', 'y',
-         'z']
-
-####
 def gen2(savepath=None, text = 'text', index=1, mirror=False,
         invert=False, fontname='Arial', W = 64, H = 64, size=24,
         xshift=0, yshift=0, upper=0, spacing=0, show=None):
@@ -54,42 +46,21 @@ def gen2(savepath=None, text = 'text', index=1, mirror=False,
         x += letter_w + spacing
 
     if x>(W+spacing+2) or (xshift + h_anchor)<-1:
-        img.save(f"testimg/{text}_{xshift}_{yshift}_{spacing}.jpg")
-        raise ValueError(f"Text width is bigger than image. Failed on size:{size}")
+        img.save(f"data/examples_ACL/errors/{text}_{xshift}_{yshift}_{spacing}.jpg")
+        #raise ValueError(f"Text width is bigger than image. Failed on size:{size}")
 
     if len(text)==5:
-        img.save(f"testimg/{text}_{xshift}_{yshift}_{spacing}.jpg")
+        img.save(f"data/examples_ACL/{text}_{xshift}_{yshift}_{spacing}.jpg")
     
     return img
 
-
 def generate_ngrams(unigrams, n=1):
 
-    if n >= 2:
-        unigrams = ["a", "k", "l", "m",  "v"]
-        unigrams = ["n", "m", "v"]
-        # unigrams = ["a", "d", "h", "i", "m", "n", "t"] # awraval
-        unigrams = ["a","b"]
-
-    # if n >= 1:
     res = unigrams.copy()
     for i in range(2,n+1):
         t = product(unigrams, repeat=i)
         res += ["".join(x) for x in t]
-    """ 
-    if n >= 2:
-        t = product(unigrams, repeat=2)
-        bigrams = ["".join(x) for x in t]
-        f = int(len(bigrams)/len(unigrams))
-        bigrams += unigrams*f
-        res = bigrams
-    if n == 3:
-        t = product(unigrams, repeat=3)
-        trigrams = ["".join(x) for x in t]
-        f = int(len(trigrams) / len(bigrams))
-        trigrams += bigrams * f
-        res = trigrams
-     """
+
     classes = generate_clases_ngrams(res, unigrams)
     return res, classes, unigrams
 
@@ -106,14 +77,13 @@ def generate_clases_ngrams(res, unigrams):
 
     return classes
 
-
 def add_class(x):
     return zip(range(len(x)), x)
 
 
 def CreateWordSet(path_out = '../data/dletters/dletters',
                   ngrams   = 1,
-                  n_train  = 100_000):
+                  words = ["a"]):
 
     #define words, sizes, fonts
     wordlist, classes, unigrams = generate_ngrams(words, ngrams)
@@ -121,10 +91,10 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
     sizes = [12]#np.arange(12, 21, 3)
     fonts = ['arial']#, 'times']#, 'comic']
     xshifts = np.arange(-2,  4, 1)
-    yshifts = np.arange(-4, 4, 1)
+    yshifts = np.arange(-10, 11, 2)
     colours = [0]
     uppers  = [1]#[0, 1]
-    spacing = range(-2, 2, 1)
+    spacing = range(-2, 3, 1)
 
     gc.collect()
 
@@ -151,7 +121,7 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
                 img = gen2(savepath=None, index=None, # no saving
                            text=word, fontname=font, size=size,
-                           xshift=xshift, yshift=yshift, upper=upper, spacing=sp)
+                           xshift=xshift, yshift=yshift, upper=upper, spacing=space)
 
                 imgs.append(np.array(img))
 
@@ -165,11 +135,13 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
                 latents_values_str.append([word, sp, size, xshift, yshift, font, upper])
 
     os.makedirs(path_out, exist_ok=True)
-    f_name = f'/dletters_n{ngrams}'
+    letters = "".join(words).upper()
+    f_name = f'/dletters_n{ngrams}_{letters}'
     np.savez(path_out + f_name,
              imgs=imgs, latents_classes=latents_classes, words=wordlist, latents_values=latents_values,
              latents_names=latents_names, latents_size=latents_size, latents_values_str=latents_values_str)
 
 
 ngrams = 5
-CreateWordSet(f'data/dwords/', ngrams)
+words = ['a', 'b', 'c']
+CreateWordSet(f'data/dwords/', ngrams, words)

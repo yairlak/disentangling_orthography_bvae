@@ -50,8 +50,9 @@ def save(train, test, path):
                 latents_size = test["latents_size"])
 
 
-
-f = np.load("../data/dwords/dletters_n5_AB.npz")
+basepath = "../data/"
+dataset = "dletters_n5_ABC.npz"
+f = np.load(f"{basepath}/dwords/{dataset}")
 
 lat_names = list(f.get('latents_names'))
 lat_values = f.get('latents_values_str')
@@ -64,7 +65,7 @@ for l in set(lengths):
     test_ind = [x==l for x in lengths]
     f_train, f_test = split(f, test_ind)
 
-    path = f"length/{l}/"
+    path = f"{basepath}/generalization/length/{l}/"
     save(f_train, f_test, path)
     
 
@@ -75,7 +76,7 @@ for l in letters:
         test_ind = [x[s-1]==l if len(x)>=s else False for x in words ]
         f_train, f_test = split(f, test_ind)
 
-        path = f"abstrac_pos/{l}_{s}/"
+        path = f"{basepath}/generalization/abstrac_pos/{l}_{s}/"
         save(f_train, f_test, path)
 
 # spacing 
@@ -85,7 +86,7 @@ for s in set(spacings):
     test_ind = [x==s for x in spacings]
     f_train, f_test = split(f, test_ind)
 
-    path = f"spacing/{s}/"
+    path = f"{basepath}/generalization/spacing/{s}/"
     save(f_train, f_test, path)
 
 
@@ -97,7 +98,7 @@ for s in set(shifts):
     test_ind = [x==s for x in shifts]
     f_train, f_test = split(f, test_ind)
 
-    path = f"retinal_pos/{s[0]}_{s[1]}/"
+    path = f"{basepath}/generalization/retinal_pos/{s[0]}_{s[1]}/"
     save(f_train, f_test, path)
 
 
