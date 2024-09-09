@@ -1,9 +1,11 @@
 import pandas as pd 
 import os
 import matplotlib.pyplot as plt
-#import seaborn as sns
+import seaborn as sns
 
 folder = "generalization_4/figures"
+path = "results/generalization_4/"
+
 os.makedirs(folder, exist_ok=True)
 
 def load_acc(file_path):
@@ -21,14 +23,12 @@ def load_acc(file_path):
 def list_folders(p):
     return [f for f in os.listdir(p) if os.path.isdir(os.path.join(p, f))]
 
-
 res = {"variation_factor":[],
        "combination":[],
        "beta":[],
        "Accuracy_input":[],
        'Accuracy_reconstruct':[]}
 
-path = "results/generalization_4/"
 var_factors = [x for x in list_folders(path) if not x == 'OLD']
 
 for v in var_factors:

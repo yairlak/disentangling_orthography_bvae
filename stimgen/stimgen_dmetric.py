@@ -144,4 +144,6 @@ def CreateWordSet(path_out = '../data/dletters/dletters',
 
 ngrams = 5
 words = ['a', 'b', 'c']
-CreateWordSet(f'data/dwords/', ngrams, words)
+words_lists = [["K", "X"], ["M","N"], ["E","F"], ["Q","O"], ["P","R"], ["M","P"],["O","K"],["X","F"]]
+for words in words_lists:
+    CreateWordSet(f'data/dwords/', ngrams, words)

@@ -193,8 +193,6 @@ class Evaluator:
         H_z = self._estimate_latent_entropies(samples_zCx, params_zCx)
 
         # conditional entropy H(z|v)
-        # print(lat_sizes, latent_dim)
-        # print(samples_zCx)
         samples_zCx = samples_zCx.view(*lat_sizes, latent_dim)
         params_zCx = tuple(p.view(*lat_sizes, latent_dim) for p in params_zCx)
         H_zCv = self._estimate_H_zCv(samples_zCx, params_zCx, lat_sizes, lat_names)
@@ -203,6 +201,7 @@ class Evaluator:
         H_zCv = H_zCv.cpu()
 
         # I[z_j;v_k] = E[log \sum_x q(z_j|x)p(x|v_k)] + H[z_j] = - H[z_j|v_k] + H[z_j]
+        # Eq5 of Cheng et al 2018
         mut_info = - H_zCv + H_z
 
         sorted_mut_info = torch.sort(mut_info, dim=1, descending=True)[0].clamp(min=0)
@@ -399,6 +398,7 @@ class Evaluator:
         return H_z
 
     def _estimate_H_zCv(self, samples_zCx, params_zCx, lat_sizes, lat_names):
+
         """Estimate conditional entropies :math:`H[z|v]`."""
         latent_dim = samples_zCx.size(-1)
         len_dataset = reduce((lambda x, y: x * y), lat_sizes)

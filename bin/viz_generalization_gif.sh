@@ -23,7 +23,8 @@ for ((i = 0; i < ${#ANALYSES[@]}; i++)); do
     path=$f'/'$loss'_'$dataset'_'$name
     # Plot model
     cmd='python main_viz.py '$path' gif-traversals  -p '$f' -f test.npz -r 6 --max-traversal 3 -s 42'
-    #cmd='python main_viz.py '$path' reconstruct  -p '$f' -f test.npz -r 2 -c 6 -s 42'
+    cmd='python main_viz.py '$path' reconstruct  -p '$f' -f test.npz -r 2 -c 6 -s 42'
+
     eval $cmd
 
 done

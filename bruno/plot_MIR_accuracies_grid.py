@@ -3,9 +3,11 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy
+from scipy import stats
+
 #import seaborn as sns
 
-folder = "generalization_4/figures"
+folder = "generalization_pareto/figures"
 os.makedirs(folder, exist_ok=True)
 
 def load_acc(file_path):
@@ -32,46 +34,56 @@ res = {"ls":[],
        'MIR':[],
        'MIG':[]}
 
-path = "results/grid_search/"
-models = [x for x in list_folders(path) if not x == 'OLD']
+tests = ["abstrac_pos","length","retinal_pos"]
 
-for m in models:
-    base_path = os.path.join(path, m) 
+for t in tests:
 
-    print(m)
-    beta = int(m.split("_")[3])
-    ls = int(m.split("_")[6])
+    path = f"results/generalization_pareto/{t}"
+    models = [p for p, _, _ in os.walk(path) if len(p.split("/"))==5]
 
-    this_f = os.path.join(base_path,"classier_acc.log")
-    if os.path.isfile(this_f):
-        model_acc = load_acc(this_f)
-    else:
-        print("acc not found")
-        continue
+    for base_path in models:
+        print(base_path)
 
-    this_f = os.path.join(base_path,"metrics.log")
-    if os.path.isfile(this_f):
-        model_metrics = load_acc(this_f)
-    else:
-        print("metrics not found")
-        continue
-            
-    res["ls"].append(ls)
-    res["beta"].append(beta)
-    res["Accuracy_input"].append(model_acc["Accuracy_input"])
-    res["Accuracy_reconstruct"].append(model_acc["Accuracy_reconstruct"])
-    res["AAM"].append(model_metrics["AAM"])
-    res["MIG"].append(model_metrics["MIG"])
-    res["MIR"].append(model_metrics["MIR"])
+        m = base_path.split("/")[-1]
 
-df = pd.DataFrame(res)
+        beta = int(m.split("_")[3])
+        ls = int(m.split("_")[6])
 
-df["MIR_log"] = np.log(df["MIR"])
-ax = df.plot.scatter("MIR_log","Accuracy_reconstruct")
-ax.figure.savefig(f'{folder}/MIR_acc.png')
+        this_f = os.path.join(base_path,"classier_acc_test.log")
+        if os.path.isfile(this_f):
+            model_acc = load_acc(this_f)
+        else:
+            print("acc not found")
+            continue
 
-scipy.stats.pearsonr(df["MIR_log"],df["Accuracy_reconstruct"])
+        this_f = os.path.join(base_path,"metrics_pos_enc.log")
+        if os.path.isfile(this_f):
+            model_metrics = load_acc(this_f)
+        else:
+            print("metrics not found")
+            continue
 
+        res["ls"].append(ls)
+        res["beta"].append(beta)
+        res["Accuracy_input"].append(model_acc["Accuracy_input"])
+        res["Accuracy_reconstruct"].append(model_acc["Accuracy_reconstruct"])
+        res["AAM"].append(model_metrics["AAM"])
+        res["MIG"].append(model_metrics["MIG"])
+        res["MIR"].append(model_metrics["MIR"])
+
+    df = pd.DataFrame(res)
+
+    df["MIR_log"] = np.log(df["MIR"])
+
+    df = df[df["MIR_log"] > -0.9]
+
+    pearson = stats.pearsonr(df["MIR_log"], df["Accuracy_reconstruct"])
+
+    ax = df.plot.scatter("MIR_log","Accuracy_reconstruct")
+    ax.set_xlabel("Mutual Information Ratio (log)")
+    ax.set_ylabel("CompOrth Performance")
+    ax.set_title(f"{t}\nPerson corr:{pearson[0]:.3}; p-val:{pearson[1]:.3}")
+    ax.figure.savefig(f'{folder}/MIR_acc_{t}.png')
 
 pass
 

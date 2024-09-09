@@ -11,9 +11,9 @@ import matplotlib.pyplot as plt
 model_and_data_type = 'betaB_dletters'
 
 # PATHS
-path2logs = os.path.join('.', 'results')
+path2logs = os.path.join('.', 'results/grid_search/')
 path2output = os.path.join('.', 'results')
-path2figures = os.path.join('.', 'figures')
+path2figures = os.path.join('.', 'figures/paper_neurips/')
 
 dirnames = glob.glob(os.path.join(path2logs, model_and_data_type + '*/'))
 print(f'found {len(dirnames)} models')
@@ -80,56 +80,6 @@ best_MIG_models_names = df_by_loss.sort_values('log_MIG',ascending=False)["model
 print(f'Best 5 models by MEG, from the 10 best loss models: ', *best_MIG_models_names, sep='\n- ')
 
 
-'''
-# PLOT
-fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-sns.barplot(data=df, x='beta', y='recon_loss', hue='latent_size', ax=axs[0, 0])#, order=df['beta'])
-sns.barplot(data=df, x='beta', y='log_MIR', hue='latent_size', ax=axs[0, 1])#, order=df['beta'])
-sns.barplot(data=df, x='learning_rate', y='recon_loss', hue='batch_size', ax=axs[1, 0])#, order=df['learning_rate'])
-sns.barplot(data=df, x='learning_rate', y='log_MIR', hue='batch_size', ax=axs[1, 1])#, order=df['learning_rate'])
-for ax in axs.flatten():
-    ax.xaxis.label.set_size(30)
-    ax.yaxis.label.set_size(30)
-    ax.tick_params(labelsize=20)
-plt.legend(prop={'size': 6})
-fn_fig = os.path.join(path2figures, 'grid_search_results.png')
-fig.savefig(fn_fig)
-plt.close(fig)
-print(f'Figure saved to: {fn_fig}')
-
-# PLOT
-fig, axs = plt.subplots(2, 1, figsize=(20, 30))
-sns.barplot(data=df, x='model_name_short', y='recon_loss', ax=axs[0])
-sns.barplot(data=df, x='model_name_short', y='log_MIG', ax=axs[1])
-for ax in axs:
-    ax.xaxis.label.set_size(30)
-    ax.yaxis.label.set_size(30)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
-    ax.tick_params(labelsize=20)
-    ax.legend().remove()
-plt.subplots_adjust(bottom=0.15, hspace=0.5)
-fn_fig = os.path.join(path2figures, 'grid_search_results_all_models.png')
-fig.savefig(fn_fig)
-plt.close(fig)
-print(f'Figure saved to: {fn_fig}')
-
-# SCATTER MIG
-fig, ax = plt.subplots(1, 1, figsize=(20, 20))
-sns.scatterplot(data=df, x='neg_recon_loss', y='log_MIG')
-ax.xaxis.label.set_size(30)
-ax.yaxis.label.set_size(30)
-ax.tick_params(labelsize=20)
-ax.legend().remove()
-for i, row in df.iterrows():
-    ax.text(row['neg_recon_loss'], row['log_MIG'],
-            row['model_name_short'], fontsize=20)
-plt.subplots_adjust(right=0.85)
-fn_fig = os.path.join(path2figures, 'grid_search_results_scatter.png')
-fig.savefig(fn_fig)
-plt.close(fig)
-print(f'Figure saved to: {fn_fig}')
-'''
-
 # SCATTER MIG
 fig, ax = plt.subplots(1, 1, figsize=(20, 20))
 sns.scatterplot(data=df, x='neg_recon_loss', y='log_MIR')
@@ -141,43 +91,50 @@ for i, row in df.iterrows():
     ax.text(row['neg_recon_loss'], row['log_MIR'],
             row['model_name_short'], fontsize=20)
 plt.subplots_adjust(right=0.85)
-fn_fig = os.path.join(path2figures, 'paper/grid_search_results_scatter_MIR.png')
+fn_fig = os.path.join(path2figures, 'grid_search_results_scatter_MIR.png')
 fig.savefig(fn_fig)
 plt.close(fig)
 print(f'Figure saved to: {fn_fig}')
 
-# SCATTER MIR (no names)
-add_text = ["b_4_ls_32", "b_8_ls_16", "b_64_ls_8", "b_2_ls_128"]
+# SCATTER MIR (no names) + pareto
+add_text = ["b_2_ls_128"]#"b_1_ls_64",
 add_text = [x+"_bs_64_lr_0.0001" for x in add_text]
 df["selected_models"] = df["model_name_short"].isin(add_text)
 
+add_text = ["b_64_ls_32"]
+add_text = [x+"_bs_64_lr_0.0001" for x in add_text]
+df["worst_pareto_model"] = df["model_name_short"].isin(add_text)
+
+import oapackage
+
+pareto = oapackage.ParetoDoubleLong()
+
+for i,r in df.iterrows():
+    w = oapackage.doubleVector( (r["neg_recon_loss"], r["log_MIR"]))
+    pareto.addvalue(w, i)
+
+pareto.show(verbose=1)
+lst = list(pareto.allindices()) # the indices of the Pareto optimal designs
+optimal_datapoints = df.loc[lst]
+optimal_datapoints["model_name_short"] = optimal_datapoints["model_name_short"].str.extract(r'(.+)_bs*')
+optimal_datapoints["model_name_short"] = optimal_datapoints["model_name_short"].str.replace("b_", "beta:").str.replace("_ls_"," ls:")
+
 fig, ax = plt.subplots(1, 1, figsize=(20, 20))
-sns.scatterplot(data=df, x='neg_recon_loss', y='log_MIR', hue="selected_models", s=200)
+sns.scatterplot(data=optimal_datapoints, x='neg_recon_loss', y='log_MIR',
+                s=1000, color="purple", label="Pareto Front")
+sns.scatterplot(data=df, x='neg_recon_loss', y='log_MIR', s=400, color="grey")
+sns.scatterplot(data=optimal_datapoints, x='neg_recon_loss', y='log_MIR', s=400,
+                hue="model_name_short", hue_order=optimal_datapoints["model_name_short"].sort_values())
+sns.scatterplot(data=df[df["selected_models"]], x='neg_recon_loss', y='log_MIR',
+                color="black", s=400, label="beta:2 ls:128")
 ax.xaxis.label.set_size(30)
 ax.yaxis.label.set_size(30)
 ax.tick_params(labelsize=20)
-ax.legend().remove()
+ax.legend(loc='lower left', fontsize=35)
 # plt.subplots_adjust(right=0.85)
-fn_fig = os.path.join(path2figures, 'paper/grid_search_results_scatter_no_names.svg')
+fn_fig = os.path.join(path2figures, 'grid_search_results_scatter_no_names.svg')
 fig.savefig(fn_fig)
 plt.close(fig)
 print(f'Figure saved to: {fn_fig}')
 
-'''
-
-# SCATTER MIG vs MIG
-fig, ax = plt.subplots(1, 1, figsize=(20, 20))
-sns.scatterplot(data=df, x='log_MIG', y='log_MIR')
-ax.xaxis.label.set_size(30)
-ax.yaxis.label.set_size(30)
-ax.tick_params(labelsize=20)
-ax.legend().remove()
-for i, row in df.iterrows():
-    ax.text(row['log_MIG'], row['log_MIR'],
-            row['model_name_short'], fontsize=20)
-plt.subplots_adjust(right=0.85)
-fn_fig = os.path.join(path2figures, 'grid_search_results_scatter_MIR_MIG.png')
-fig.savefig(fn_fig)
-plt.close(fig)
-print(f'Figure saved to: {fn_fig}')
-'''
+pass

@@ -72,7 +72,8 @@ def parse_arguments(args_to_parse):
                           default="dletters.npz")
     parser.add_argument('-p', '--path', help="path to dataset file.",
                           default="data/dwords/")
-
+    parser.add_argument('--classif', help="Run classification metric?",
+                          default=1)
     args = parser.parse_args()
 
     return args
@@ -125,7 +126,9 @@ def main(args):
                           save_dir=exp_dir,
                           is_progress_bar=not args.no_progress_bar)
 
-    metric, losses, acc = evaluator(test_loader, is_metrics=args.is_metrics, is_losses=not args.no_test)
+    metric, losses, acc = evaluator(test_loader, is_metrics=args.is_metrics,
+                                    is_losses=not args.no_test,
+                                    is_classification=bool(args.classif))
     fn = os.path.join(model_dir, 'eval.pkl')
     with open(fn, 'wb') as f:
         pickle.dump([metric, losses, acc], f)
